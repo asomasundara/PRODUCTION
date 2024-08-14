@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Competitors__c</fullName>
+    <description>as of 6/20/2019 - Pulled from the Competitors object related to the opportunity
+Before then it was a multi-select picklist
+Integrated with Klue to provide Klue Battlecards</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Pulled from the Competitors object related to the opportunity</inlineHelpText>
+    <label>All Competitors</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

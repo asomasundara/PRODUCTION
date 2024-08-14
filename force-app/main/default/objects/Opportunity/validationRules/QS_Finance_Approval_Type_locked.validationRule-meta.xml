@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>QS_Finance_Approval_Type_locked</fullName>
+    <active>true</active>
+    <description>Opportunity Type is locked once the Opportunity is Finance Approved</description>
+    <errorConditionFormula>AND(ISCHANGED( Type ), 
+ISPICKVAL( Finance_Status__c, &apos;Approved&apos;))</errorConditionFormula>
+    <errorMessage>Opportunity Type is locked once the Opportunity is Finance Approved</errorMessage>
+</ValidationRule>

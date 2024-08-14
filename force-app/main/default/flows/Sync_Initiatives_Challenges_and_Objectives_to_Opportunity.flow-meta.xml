@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>60.0</apiVersion>
+    <assignments>
+        <name>Assign_New_VM_Date</name>
+        <label>Assign New VM Date</label>
+        <locationX>578</locationX>
+        <locationY>1079</locationY>
+        <assignmentItems>
+            <assignToReference>getContactRole.newValueMap__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Flow.CurrentDateTime</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>updatePersona</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_this_VM_and_Persona</name>
+        <label>Assign this VM and Persona</label>
+        <locationX>710</locationX>
+        <locationY>863</locationY>
+        <assignmentItems>
+            <assignToReference>getContactRole.Value_Map__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>getContactRole.Persona__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.Persona__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Is_New</targetReference>
+        </connector>
+    </assignments>
+    <customErrors>
+        <name>Can_not_change_Contact</name>
+        <label>Can not change Contact</label>
+        <locationX>50</locationX>
+        <locationY>431</locationY>
+        <customErrorMessages>
+            <errorMessage>Attention: Primary Contact can not be changed. Please create a new Value Map for each contact.</errorMessage>
+            <isFieldError>false</isFieldError>
+        </customErrorMessages>
+    </customErrors>
+    <customErrors>
+        <name>Contact_has_other_VM</name>
+        <label>Contact has other VM</label>
+        <locationX>314</locationX>
+        <locationY>647</locationY>
+        <customErrorMessages>
+            <errorMessage>Attention: This contact already has a Value Map assigned. Please remove the existing Value Map before assigning this Value Map to that contact.</errorMessage>
+            <isFieldError>false</isFieldError>
+        </customErrorMessages>
+    </customErrors>
+    <decisions>
+        <name>Check_for_existing_Value_Map</name>
+        <label>Check for existing Value Map</label>
+        <locationX>589</locationX>
+        <locationY>539</locationY>
+        <defaultConnector>
+            <targetReference>getContactRole</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Either same or no VM</defaultConnectorLabel>
+        <rules>
+            <name>Has_a_different_VM</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Check_Value_Maps</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Contact_has_other_VM</targetReference>
+            </connector>
+            <label>Has a different VM</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Is_Contact_Changed</name>
+        <label>Is Contact Changed</label>
+        <locationX>319</locationX>
+        <locationY>323</locationY>
+        <defaultConnector>
+            <targetReference>Check_Value_Maps</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Contact_Changed</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Primary_Contact__c</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Can_not_change_Contact</targetReference>
+            </connector>
+            <label>Contact Changed</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Is_New</name>
+        <label>Is New?</label>
+        <locationX>710</locationX>
+        <locationY>971</locationY>
+        <defaultConnector>
+            <targetReference>updatePersona</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>isNew</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_New_VM_Date</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Is_there_a_Contact_Role_to_update</name>
+        <label>Is there a Contact Role to update?</label>
+        <locationX>864</locationX>
+        <locationY>755</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Update_Contact_Role</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>getContactRole</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Assign_this_VM_and_Persona</targetReference>
+            </connector>
+            <label>Update Contact Role</label>
+        </rules>
+    </decisions>
+    <description>Adding Value Map record to Contact Role</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>isNew</name>
+        <dataType>Boolean</dataType>
+        <expression>ISNEW()</expression>
+    </formulas>
+    <interviewLabel>Sync Initiatives, Challenges, and Objectives to Opportunity {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Sync Persona and VM to Opportunity Contact Role</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <description>Find other Value Maps for the same Opp and Same Contact</description>
+        <name>Check_Value_Maps</name>
+        <label>Check Value Maps</label>
+        <locationX>589</locationX>
+        <locationY>431</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Check_for_existing_Value_Map</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Opportunity_VVS__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Opportunity_VVS__c</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Primary_Contact__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Primary_Contact__c</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Id</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>VVS_Value_Map__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>getContactRole</name>
+        <label>Get Contact Role</label>
+        <locationX>864</locationX>
+        <locationY>647</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Is_there_a_Contact_Role_to_update</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>ContactId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Primary_Contact__c</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>OpportunityId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Opportunity_VVS__c</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>OpportunityContactRole</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>updatePersona</name>
+        <label>Update Contact Role Persona</label>
+        <locationX>710</locationX>
+        <locationY>1271</locationY>
+        <inputReference>getContactRole</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>193</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Is_Contact_Changed</targetReference>
+        </connector>
+        <filterFormula>OR(ISNEW(), ISCHANGED({!$Record.Persona__c}), ISCHANGED({!$Record.Primary_Contact__c}))</filterFormula>
+        <object>VVS_Value_Map__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

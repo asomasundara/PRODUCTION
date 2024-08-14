@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Current_Solution__c</fullName>
+    <label>Current Solution</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Access DB</fullName>
+                <default>false</default>
+                <label>Access DB</label>
+            </value>
+            <value>
+                <fullName>Callidus – Hosted</fullName>
+                <default>false</default>
+                <label>Callidus – Hosted</label>
+            </value>
+            <value>
+                <fullName>Callidus – on-premise</fullName>
+                <default>false</default>
+                <label>Callidus – on-premise</label>
+            </value>
+            <value>
+                <fullName>CATS by Centsoft</fullName>
+                <default>false</default>
+                <label>CATS by Centsoft</label>
+            </value>
+            <value>
+                <fullName>Centive – Hosted</fullName>
+                <default>false</default>
+                <label>Centive – Hosted</label>
+            </value>
+            <value>
+                <fullName>Centive – on premise</fullName>
+                <default>false</default>
+                <label>Centive – on premise</label>
+            </value>
+            <value>
+                <fullName>CloudComp</fullName>
+                <default>false</default>
+                <label>CloudComp</label>
+            </value>
+            <value>
+                <fullName>Excel</fullName>
+                <default>false</default>
+                <label>Excel</label>
+            </value>
+            <value>
+                <fullName>Glocent</fullName>
+                <default>false</default>
+                <label>Glocent</label>
+            </value>
+            <value>
+                <fullName>NetCommissions</fullName>
+                <default>false</default>
+                <label>NetCommissions</label>
+            </value>
+            <value>
+                <fullName>NICE</fullName>
+                <default>false</default>
+                <label>NICE</label>
+            </value>
+            <value>
+                <fullName>Optymyze</fullName>
+                <default>false</default>
+                <label>Optymyze</label>
+            </value>
+            <value>
+                <fullName>Oracle OIC</fullName>
+                <default>false</default>
+                <label>Oracle OIC</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Performio</fullName>
+                <default>false</default>
+                <label>Performio</label>
+            </value>
+            <value>
+                <fullName>SAP</fullName>
+                <default>false</default>
+                <label>SAP</label>
+            </value>
+            <value>
+                <fullName>Siebel</fullName>
+                <default>false</default>
+                <label>Siebel</label>
+            </value>
+            <value>
+                <fullName>Success Factors</fullName>
+                <default>false</default>
+                <label>Success Factors</label>
+            </value>
+            <value>
+                <fullName>Synygy</fullName>
+                <default>false</default>
+                <label>Synygy</label>
+            </value>
+            <value>
+                <fullName>Vericent</fullName>
+                <default>false</default>
+                <label>Vericent</label>
+            </value>
+            <value>
+                <fullName>Xactly</fullName>
+                <default>false</default>
+                <label>Xactly</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

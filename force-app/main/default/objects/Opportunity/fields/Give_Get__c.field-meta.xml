@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Give_Get__c</fullName>
+    <inlineHelpText>We have identified numerous items of value that we can give away instead of lowering the price. If we have to discount at all, we have identified numerous items of value to us that we want in order to discount the price in any way.</inlineHelpText>
+    <label>Give/Get</label>
+    <length>50000</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>LongTextArea</type>
+    <visibleLines>5</visibleLines>
+</CustomField>

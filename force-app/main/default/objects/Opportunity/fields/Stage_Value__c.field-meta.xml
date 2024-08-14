@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stage_Value__c</fullName>
+    <description>Numerical value to determine an Opportunity&apos;s stage for validation</description>
+    <externalId>false</externalId>
+    <formula>CASE
+(StageName ,
+&quot;Stage 0 - Initial Qualification&quot;, 1,
+&quot;Stage 1 - Sales Accepted Opportunity&quot;, 2,
+&quot;Stage 2 - Discovery&quot;, 3,
+&quot;Stage 3 - Tech Validation&quot;, 4,
+&quot;Stage 4 - Business Validation&quot;, 5,
+&quot;Stage 5 - Negotiation &amp; Contracts&quot;, 6,
+&quot;Stage 6 - Closed Pending&quot;, 7,
+&quot;Closed Won&quot;, 8,
+&quot;Closed Lost&quot;, 8,
+&quot;Qualified Out&quot;, 8,
+0
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Stage Value</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Has_Primary_Value_Map__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Checks if this Opp has a Value Map marked as Primary</description>
+    <label>Has Primary Value Map</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

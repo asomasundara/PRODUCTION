@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SPVR_Cant_Return_to_Previous_Stage</fullName>
+    <active>true</active>
+    <description>Sales Process Validation Rules</description>
+    <errorConditionFormula>AND(spvr_enforceSalesProcess__c = true
+   , Stage_Value__c &lt; PRIORVALUE(Stage_Value__c)
+)</errorConditionFormula>
+    <errorMessage>Sales Process: You cannot change Stage to an earlier Stage. Please contact RevOps for assistance.</errorMessage>
+</ValidationRule>

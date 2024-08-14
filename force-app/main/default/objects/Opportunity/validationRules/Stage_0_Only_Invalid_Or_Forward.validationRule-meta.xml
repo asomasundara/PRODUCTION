@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stage_0_Only_Invalid_Or_Forward</fullName>
+    <active>true</active>
+    <description>Based on sales process rules as of 8/27, stage 0 opps can only be closed out as Invalid</description>
+    <errorConditionFormula>AND(
+ISPICKVAL(PRIORVALUE(StageName),&quot;Stage 0 - Initial Qualification&quot;),
+!ispickval(Primary_Win_Loss_Reason__c, &apos;Cleanup/Duplicate&apos;),
+!ispickval(Primary_Win_Loss_Reason__c, &apos;Inherited bad opp&apos;),
+OR(ISPICKVAL(StageName, &quot;Closed Lost&quot;),
+ISPICKVAL(StageName, &quot;Disqualified&quot;)),
+ISPICKVAL(Type, &quot;New Business&quot;))</errorConditionFormula>
+    <errorMessage>Opps that are in Stage 0 cannot be moved to &quot;Closed Lost&quot; or &quot;Disqualified&quot;. If you want to close the opp, please flag as &quot;Invalid&quot; and indicate why in the &quot;Reason for Close&quot;.</errorMessage>
+</ValidationRule>

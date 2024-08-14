@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sub_Loss_Reason__c</fullName>
+    <label>Sub Loss Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Primary_Win_Loss_Reason__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Service Cost</fullName>
+                <default>false</default>
+                <label>Service Cost</label>
+            </value>
+            <value>
+                <fullName>Software Cost</fullName>
+                <default>false</default>
+                <label>Software Cost</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

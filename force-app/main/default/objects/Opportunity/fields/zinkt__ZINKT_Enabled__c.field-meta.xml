@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>zinkt__ZINKT_Enabled__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Set to True if the Opportunity Owner is SPM enabled.</description>
+    <formula>Owner.zinkt__ZINKT_Enabled__c &amp;&amp; NOT(ISBLANK(Owner.zinkt__ZINKT_SPM_ID__c))</formula>
+    <inlineHelpText>This is checked if the Opportunity Owner is enabled for ZINKT and has a valid ZINKT SPM ID.</inlineHelpText>
+    <label>SPM Enabled</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

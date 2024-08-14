@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Partner_Priming_Services__c</fullName>
+    <label>Consulting Partner</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Accenture</fullName>
+                <default>false</default>
+                <label>Accenture</label>
+            </value>
+            <value>
+                <fullName>Appirio</fullName>
+                <default>false</default>
+                <label>Appirio</label>
+            </value>
+            <value>
+                <fullName>Canidium</fullName>
+                <default>false</default>
+                <label>Canidium</label>
+            </value>
+            <value>
+                <fullName>Deloitte</fullName>
+                <default>false</default>
+                <label>Deloitte</label>
+            </value>
+            <value>
+                <fullName>None</fullName>
+                <default>false</default>
+                <label>None</label>
+            </value>
+            <value>
+                <fullName>OpenSymmetry</fullName>
+                <default>false</default>
+                <label>OpenSymmetry</label>
+            </value>
+            <value>
+                <fullName>Optimum Resources</fullName>
+                <default>false</default>
+                <label>Optimum Resources</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Spectrum</fullName>
+                <default>false</default>
+                <label>Spectrum</label>
+            </value>
+            <value>
+                <fullName>SPI</fullName>
+                <default>false</default>
+                <label>SPI</label>
+            </value>
+            <value>
+                <fullName>ZS Associates</fullName>
+                <default>false</default>
+                <label>ZS Associates</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

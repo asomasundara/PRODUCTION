@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PO_for_the_entire_contract__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Indicates whether or not the customer&apos;s PO is good for the entire contract. Populated via completion of the finance checklist.</description>
+    <inlineHelpText>Indicates whether or not the customer&apos;s PO is good for the entire contract. Populated via completion of the finance checklist.</inlineHelpText>
+    <label>PO for the entire contract? (Retired)</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

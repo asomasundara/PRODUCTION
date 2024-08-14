@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pre_Booked_Project__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Used by IT Integrations - Field linked to the OpenAir integration to identify prebooked SOWs and indicate that an OA project should be created before the SOW has been signed</description>
+    <label>Pre-Booked Project</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

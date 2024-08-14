@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ARR_Without_OTD__c</fullName>
+    <description>Annual Recurring Revenue without One-Time Discount applied.</description>
+    <inlineHelpText>Annual Recurring Revenue without One-Time Discount applied.</inlineHelpText>
+    <label>ARR Without OTD</label>
+    <summarizedField>OpportunityLineItem.Annual_Recurring_Revenue__c</summarizedField>
+    <summaryFilterItems>
+        <field>OpportunityLineItem.Product_Type__c</field>
+        <operation>notEqual</operation>
+        <value>One-Time Discount</value>
+    </summaryFilterItems>
+    <summaryForeignKey>OpportunityLineItem.OpportunityId</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Decision_Maker_Engagement__c</fullName>
+    <description>Field used for VVS (Vista Value Selling) Closing Plan.</description>
+    <inlineHelpText>Have I successfully identified and engaged everyone who gets a vote—either “yes” or “no” (i.e., Procurement, Finance, IT, Legal)?</inlineHelpText>
+    <label>Power Map: Decision Maker Engagement</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1 - I&apos;ve just started capturing this information</fullName>
+                <default>false</default>
+                <label>1 - I&apos;ve just started capturing this information</label>
+            </value>
+            <value>
+                <fullName>2 - I know who all of the Decision Makers are</fullName>
+                <default>false</default>
+                <label>2 - I know who all of the Decision Makers are</label>
+            </value>
+            <value>
+                <fullName>3 - I know who all of the Decision Makers are and they&apos;re supporters</fullName>
+                <default>false</default>
+                <label>3 - I know who all of the Decision Makers are and they&apos;re supporters</label>
+            </value>
+            <value>
+                <fullName>0 - Inadequate Decision Maker support</fullName>
+                <default>false</default>
+                <label>0 - Inadequate Decision Maker support</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

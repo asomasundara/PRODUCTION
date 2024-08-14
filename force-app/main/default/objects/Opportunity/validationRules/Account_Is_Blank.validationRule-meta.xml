@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Is_Blank</fullName>
+    <active>true</active>
+    <description>Only Create Opps via Contacts</description>
+    <errorConditionFormula>OR( 
+AND(ISCHANGED( AccountId ), 
+$Permission.Sales_Operations = false,
+$Profile.Name &lt;&gt; &quot;IT&quot;, 
+$Profile.Name &lt;&gt; &quot;System Administrator&quot;), 
+AND(ISNEW(),ISBLANK(AccountId)) )</errorConditionFormula>
+    <errorMessage>Please create the Opportunity by going to the Contact you&apos;re working with, and clicking the &quot;New Opportunity&quot; button from there.
+
+Also - If you want to update the Account, please reach out to Sales Ops to make the change</errorMessage>
+</ValidationRule>

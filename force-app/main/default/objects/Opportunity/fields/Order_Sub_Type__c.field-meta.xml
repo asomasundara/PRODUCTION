@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Order_Sub_Type__c</fullName>
+    <description>Used by IT Integrations</description>
+    <label>Order Sub-Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Order_Type__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Reduction</fullName>
+                <default>false</default>
+                <label>Reduction</label>
+            </value>
+            <value>
+                <fullName>Cancellation</fullName>
+                <default>false</default>
+                <label>Cancellation</label>
+            </value>
+            <value>
+                <fullName>Upgrade</fullName>
+                <default>false</default>
+                <label>Upgrade</label>
+            </value>
+            <value>
+                <fullName>Downgrade</fullName>
+                <default>false</default>
+                <label>Downgrade</label>
+            </value>
+            <value>
+                <fullName>Contract Extension</fullName>
+                <default>false</default>
+                <label>Contract Extension</label>
+            </value>
+            <value>
+                <fullName>Migration</fullName>
+                <default>false</default>
+                <label>Migration</label>
+            </value>
+            <value>
+                <fullName>Early Renewal</fullName>
+                <default>false</default>
+                <label>Early Renewal</label>
+            </value>
+            <value>
+                <fullName>Standard</fullName>
+                <default>false</default>
+                <label>Standard</label>
+            </value>
+            <value>
+                <fullName>Cross Sell</fullName>
+                <default>false</default>
+                <label>Cross Sell</label>
+            </value>
+            <value>
+                <fullName>Upsell</fullName>
+                <default>false</default>
+                <label>Upsell</label>
+            </value>
+            <value>
+                <fullName>Both</fullName>
+                <default>false</default>
+                <label>Both</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>AddOn</controllingFieldValue>
+            <valueName>Cross Sell</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AddOn</controllingFieldValue>
+            <valueName>Upsell</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AddOn</controllingFieldValue>
+            <valueName>Both</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Migration</controllingFieldValue>
+            <valueName>Upgrade</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Migration</controllingFieldValue>
+            <valueName>Downgrade</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Subscription Renewal</controllingFieldValue>
+            <controllingFieldValue>Contract Renewal</controllingFieldValue>
+            <valueName>Standard</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Decommission</controllingFieldValue>
+            <controllingFieldValue>Contract Renewal</controllingFieldValue>
+            <valueName>Reduction</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Decommission</controllingFieldValue>
+            <controllingFieldValue>Contract Renewal</controllingFieldValue>
+            <valueName>Cancellation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Decommission</controllingFieldValue>
+            <controllingFieldValue>Contract Renewal</controllingFieldValue>
+            <valueName>Contract Extension</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Decommission</controllingFieldValue>
+            <controllingFieldValue>Contract Renewal</controllingFieldValue>
+            <valueName>Migration</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Decommission</controllingFieldValue>
+            <valueName>Early Renewal</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

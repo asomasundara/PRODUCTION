@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RSM_Forecast_Category__c</fullName>
+    <inlineHelpText>The forecast status of the opportunity as noted by the Sales Manager.</inlineHelpText>
+    <label>Manager Forecast Category</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>4 - Omitted</fullName>
+                <default>false</default>
+                <label>4 - Omitted</label>
+            </value>
+            <value>
+                <fullName>3 - Pipeline</fullName>
+                <default>false</default>
+                <label>3 - Pipeline</label>
+            </value>
+            <value>
+                <fullName>2 - Best Case</fullName>
+                <default>false</default>
+                <label>2 - Best Case</label>
+            </value>
+            <value>
+                <fullName>1 - Commit</fullName>
+                <default>false</default>
+                <label>1 - Commit</label>
+            </value>
+            <value>
+                <fullName>0 - Closed Won</fullName>
+                <default>false</default>
+                <label>0 - Closed Won</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

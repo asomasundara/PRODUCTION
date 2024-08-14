@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Primary_Campaign_Member_Date__c</fullName>
+    <description>The date of the most recent campaign interaction of the primary contact on the opportunity when the opportunity was created.</description>
+    <label>Primary Campaign Member Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Date</type>
+</CustomField>

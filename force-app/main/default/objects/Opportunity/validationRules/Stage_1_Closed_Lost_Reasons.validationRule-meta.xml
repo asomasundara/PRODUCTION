@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stage_1_Closed_Lost_Reasons</fullName>
+    <active>false</active>
+    <description>Please indicate the Closed Lost reason. For an opp in Stage 1, acceptable Primary Win/Loss Reasons reasons include: &quot;No Budget&quot;, &quot;Not a decision maker&quot;, &quot;Product fit&quot;, and &quot;Not ready to buy&quot;</description>
+    <errorConditionFormula>AND(
+OR(
+$Profile.Name = &quot;Sales Manager&quot;,
+$Profile.Name = &quot;Sales VP&quot;,
+$Profile.Name = &quot;System Administrator&quot;
+),
+OR(
+ISPICKVAL( Primary_Win_Loss_Reason__c  ,&quot;Value&quot;),  
+ISPICKVAL(Primary_Win_Loss_Reason__c,&quot;References&quot;),
+ISPICKVAL(Primary_Win_Loss_Reason__c,&quot;Price&quot;),
+ISPICKVAL(Primary_Win_Loss_Reason__c,&quot;Project Deferred&quot;),
+ISPICKVAL(Primary_Win_Loss_Reason__c,&quot;Customer Withdrawn&quot;),
+ISPICKVAL(Primary_Win_Loss_Reason__c,&quot;Other&quot;)
+),
+ISPICKVAL(PRIORVALUE(StageName),&quot;Stage 1 - SAL&quot;),
+ISPICKVAL(StageName, &quot;Closed Lost&quot;),
+ISPICKVAL(Type, &quot;New Business&quot;)
+)</errorConditionFormula>
+    <errorMessage>Please indicate the Closed Lost reason. For an opp in Stage 1, acceptable Primary Win/Loss Reasons reasons include: &quot;No Budget&quot;, &quot;Not a decision maker&quot;, &quot;Product fit&quot;, and &quot;Not ready to buy&quot;</errorMessage>
+</ValidationRule>

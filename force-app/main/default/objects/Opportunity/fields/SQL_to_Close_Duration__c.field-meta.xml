@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SQL_to_Close_Duration__c</fullName>
+    <externalId>false</externalId>
+    <formula>if(ISBLANK(SQL_Date_15__c),0,  if( IsClosed, if((CloseDate - SQL_Date_15__c )&lt;0,0,(CloseDate - SQL_Date_15__c)), TODAY() - SQL_Date_15__c))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>SQL to Close Duration</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

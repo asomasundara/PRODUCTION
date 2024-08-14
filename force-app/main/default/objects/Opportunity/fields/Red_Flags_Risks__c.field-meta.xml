@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Red_Flags_Risks__c</fullName>
+    <inlineHelpText>We have identified, with the customer, all the potential risks/obstacles that could cause this deal to die or push out. We have a plan in place with the customer on how to mitigate all the potential obstacles/risks.</inlineHelpText>
+    <label>Red Flags/Risks</label>
+    <length>50000</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>LongTextArea</type>
+    <visibleLines>5</visibleLines>
+</CustomField>

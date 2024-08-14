@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_ACV__c</fullName>
+    <description>Annual Contract Value for Software, PS and Hardware sales. For perpetual deals with maintenance, Total ACV would be the Software Annual Maintenance amount (Annual Recurring Revenue) + Hardware Annual Maintenance amount (Annual Recurring Revenue) + Recurring Revenue from Services (if any).</description>
+    <label>Total ACV</label>
+    <summarizedField>OpportunityLineItem.Annual_Recurring_Revenue__c</summarizedField>
+    <summaryForeignKey>OpportunityLineItem.OpportunityId</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

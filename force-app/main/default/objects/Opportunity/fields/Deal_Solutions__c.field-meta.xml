@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Deal_Solutions__c</fullName>
+    <label>Deal Solutions</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Ecosystem</fullName>
+                <default>false</default>
+                <label>Ecosystem</label>
+            </value>
+            <value>
+                <fullName>Strategic Sales Planning</fullName>
+                <default>false</default>
+                <label>Strategic Sales Planning</label>
+            </value>
+            <value>
+                <fullName>Operational Sales Management</fullName>
+                <default>false</default>
+                <label>Operational Sales Management</label>
+            </value>
+            <value>
+                <fullName>Incentive Compensation Management</fullName>
+                <default>false</default>
+                <label>Incentive Compensation Management</label>
+            </value>
+            <value>
+                <fullName>Sales Performance Analytics</fullName>
+                <default>false</default>
+                <label>Sales Performance Analytics</label>
+            </value>
+            <value>
+                <fullName>Retail Target Management</fullName>
+                <default>false</default>
+                <label>Retail Target Management</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>6</visibleLines>
+</CustomField>

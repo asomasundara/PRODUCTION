@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Required_CS_Fields</fullName>
+    <active>true</active>
+    <description>Please indicate how this deal came about, and fill out the &quot;Time of Opportunity&quot; and &quot;Opportunity Origin&quot; fields.</description>
+    <errorConditionFormula>AND( 
+OR(
+$Profile.Name = &quot;Customer Success&quot;,
+ $User.Email = &quot;jbancheri@xactlycorp.com&quot;), 
+OR( 
+ISPICKVAL( Type,&quot;Migration&quot;), 
+ISPICKVAL( Type,&quot;Add-On Business&quot;), 
+ISPICKVAL( Type,&quot;Renewal Business&quot;)), 
+OR(
+ISBLANK( TEXT( Time_Of_Opportunity__c )),
+ISBLANK( TEXT(  Opportunity_Origin__c ))
+)
+)</errorConditionFormula>
+    <errorMessage>Please indicate how this deal came about, and fill out the &quot;Time of Opportunity&quot; and &quot;Opportunity Origin&quot; fields.</errorMessage>
+</ValidationRule>

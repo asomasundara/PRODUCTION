@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Customer_Survey__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>Check box if customer survey completed</inlineHelpText>
+    <label>Cust Survey Completed</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

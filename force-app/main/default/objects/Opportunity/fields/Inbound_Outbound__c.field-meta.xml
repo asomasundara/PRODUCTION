@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Inbound_Outbound__c</fullName>
+    <description>Updates an opportunity value to &quot;Inbound&quot; where a deal is partner sourced or is marketing sourced and the primary campaign value is not equal to blank/null.</description>
+    <externalId>false</externalId>
+    <formula>IF(OR(AND( Marketing_Sourced__c = TRUE, Campaign.Id &lt;&gt;&quot;&quot;), Partner_Sourced__c = TRUE),&quot;Inbound&quot;,&quot;Outbound&quot;)</formula>
+    <label>Inbound/Outbound</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

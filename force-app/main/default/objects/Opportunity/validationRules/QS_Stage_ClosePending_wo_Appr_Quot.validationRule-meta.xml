@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>QS_Stage_ClosePending_wo_Appr_Quot</fullName>
+    <active>true</active>
+    <description>Cannot set opportunity stage to Close Pending without an Approved Primary Quote.</description>
+    <errorConditionFormula>AND(OR(ISBLANK(SBQQ__PrimaryQuote__c), NOT(ISPICKVAL(SBQQ__PrimaryQuote__r.ApprovalStatus__c, &apos;Approved&apos;))), ISPICKVAL(StageName, &apos;Stage 6 - Closed Pending&apos;) , FALSE )</errorConditionFormula>
+    <errorMessage>You cannot advance to the Closed Pending stage without an Approved Primary Quote.</errorMessage>
+</ValidationRule>

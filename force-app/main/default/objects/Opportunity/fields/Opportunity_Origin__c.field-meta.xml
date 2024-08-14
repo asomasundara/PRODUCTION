@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opportunity_Origin__c</fullName>
+    <label>Opportunity Origin</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Customer Request</fullName>
+                <default>false</default>
+                <label>Customer Request</label>
+            </value>
+            <value>
+                <fullName>In-App Request</fullName>
+                <default>false</default>
+                <label>In-App Request</label>
+            </value>
+            <value>
+                <fullName>Proactive Reach Out</fullName>
+                <default>false</default>
+                <label>Proactive Reach Out</label>
+            </value>
+            <value>
+                <fullName>Customer Success</fullName>
+                <default>false</default>
+                <label>Customer Success</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

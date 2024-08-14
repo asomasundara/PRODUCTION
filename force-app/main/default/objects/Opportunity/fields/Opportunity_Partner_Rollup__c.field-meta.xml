@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opportunity_Partner_Rollup__c</fullName>
+    <description>Opportunity Partner Count WHERE Selling Role = Implementation</description>
+    <label>Opportunity Partner Rollup</label>
+    <summaryFilterItems>
+        <field>Opportunity_Partner__c.Selling_Role__c</field>
+        <operation>equals</operation>
+        <value>Implementation</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Opportunity_Partner__c.Opportunity__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

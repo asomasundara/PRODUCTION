@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Can_not_edit_Contact</fullName>
+    <active>true</active>
+    <description>Once a Contact Role has been created, the Contact can not be edited.</description>
+    <errorConditionFormula>ISCHANGED( ContactId )</errorConditionFormula>
+    <errorDisplayField>ContactId</errorDisplayField>
+    <errorMessage>You can not change the contact for an existing Contact Role. Please create a new Contact Role to add someone else.</errorMessage>
+</ValidationRule>

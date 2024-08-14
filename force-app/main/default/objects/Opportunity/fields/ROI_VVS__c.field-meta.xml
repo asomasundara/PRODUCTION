@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ROI_VVS__c</fullName>
+    <description>Field used for VVS (Vista Value Selling) Closing Plan.</description>
+    <inlineHelpText>Have I effectively conveyed the ROI we can deliver against the buyers’ key priorities?</inlineHelpText>
+    <label>Value Map: ROI</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1 - I&apos;ve just started capturing this information</fullName>
+                <default>false</default>
+                <label>1 - I&apos;ve just started capturing this information</label>
+            </value>
+            <value>
+                <fullName>2 - We&apos;ve documented the ROI qualitatively</fullName>
+                <default>false</default>
+                <label>2 - We&apos;ve documented the ROI qualitatively</label>
+            </value>
+            <value>
+                <fullName>3 - We&apos;ve documented the ROI quantitatively</fullName>
+                <default>false</default>
+                <label>3 - We&apos;ve documented the ROI quantitatively</label>
+            </value>
+            <value>
+                <fullName>0 - The ROI is inadequate</fullName>
+                <default>false</default>
+                <label>0 - The ROI is inadequate</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

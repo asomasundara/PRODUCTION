@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Net_New_Annual_Recurring_Revenue__c</fullName>
+    <description>Roll Up Summary from Opportunity Products to show the Deal-Level Net New ARR</description>
+    <inlineHelpText>Roll Up Summary from Opportunity Products to show the Deal-Level Net New ARR</inlineHelpText>
+    <label>Net New Annual Recurring Revenue</label>
+    <summarizedField>OpportunityLineItem.ARR_Growth__c</summarizedField>
+    <summaryForeignKey>OpportunityLineItem.OpportunityId</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

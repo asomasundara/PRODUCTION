@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Introduction_to_Customer_Exec_Sponsor__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>Required to move to Stage 3</inlineHelpText>
+    <label>Introduction to Customer Exec Sponsor</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

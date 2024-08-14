@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Demo_Quality__c</fullName>
+    <description>Field used for VVS (Vista Value Selling) Closing Plan</description>
+    <inlineHelpText>Have all key buyers confirmed they received a valuable demo tailored to their needs?</inlineHelpText>
+    <label>Purchase Process: Demo Quality</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1 - I&apos;m starting to set up the demo(s)</fullName>
+                <default>false</default>
+                <label>1 - I&apos;m starting to set up the demo(s)</label>
+            </value>
+            <value>
+                <fullName>2 - We have delivered some demos but not all</fullName>
+                <default>false</default>
+                <label>2 - We have delivered some demos but not all</label>
+            </value>
+            <value>
+                <fullName>3 - The customer has confirmed that our demos were highly valuable</fullName>
+                <default>false</default>
+                <label>3 - The customer has confirmed that our demos were highly valuable</label>
+            </value>
+            <value>
+                <fullName>0 - No/Poor demo execution</fullName>
+                <default>false</default>
+                <label>0 - No/Poor demo execution</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

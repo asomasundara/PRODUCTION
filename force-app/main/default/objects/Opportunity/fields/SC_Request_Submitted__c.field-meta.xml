@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SC_Request_Submitted__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Automatically checked by process builder when the SOW or SC Request type is &quot;SC Request&quot; and is sent it</description>
+    <label>SC Request Submitted</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

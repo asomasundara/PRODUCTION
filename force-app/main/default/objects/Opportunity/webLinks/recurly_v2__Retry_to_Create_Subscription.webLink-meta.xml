@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>recurly_v2__Retry_to_Create_Subscription</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <height>600</height>
+    <linkType>page</linkType>
+    <masterLabel>Retry to Create Subscription</masterLabel>
+    <openType>noSidebar</openType>
+    <page>recurly_v2__RecurlyRetryPendingPurchase</page>
+    <protected>false</protected>
+</WebLink>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Push_Date_Reason_Blank_New_Orders</fullName>
+    <active>true</active>
+    <errorConditionFormula>and(
+!INCLUDES($User.Xactly_Role__c, &quot;System Admin&quot;),
+ischanged(PushCount__c),
+ischanged(CloseDate),
+!ischanged( Close_Date_Push_Reason__c ),
+ISPICKVAL(Order_Type__c, &apos;New&apos;),
+OR(
+TEXT(StageName) = &quot;Stage 2 - Discovery&quot;,
+TEXT(StageName) = &quot;Stage 3 - Tech Validation&quot;,
+TEXT(StageName) = &quot;Stage 4 - Business Validation&quot;,
+TEXT(StageName) = &quot;Stage 5 - Negotiation and Contracts&quot;,
+TEXT(StageName) = &quot;Stage 6 - Closed Pending&quot;
+)
+)</errorConditionFormula>
+    <errorDisplayField>Close_Date_Push_Reason__c</errorDisplayField>
+    <errorMessage>The close date has been pushed out of the current quarter, please provide a reason as to why in the &quot;Closed Date Pushed Reason&quot; field. If there is already a &quot;Closed Date Pushed Reason&quot; filled please update the field to reflect the most recent push reason.</errorMessage>
+</ValidationRule>

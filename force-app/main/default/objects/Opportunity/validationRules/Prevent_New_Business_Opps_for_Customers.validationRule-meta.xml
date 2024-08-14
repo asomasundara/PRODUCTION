@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_New_Business_Opps_for_Customers</fullName>
+    <active>true</active>
+    <description>If an Account is an active customer, they cannot have a new business opportunity created for them</description>
+    <errorConditionFormula>AND(
+NOT( $Profile.Name = &quot;System Administrator&quot;),
+NOT( $Profile.Name = &quot;Finance&quot;),
+NOT( $Profile.Name = &quot;IT&quot;),
+RecordTypeId &lt;&gt; &quot;0121U000000G43l&quot;,
+OR(
+AND( text(Account.Type)  = &quot;Customer&quot;,
+ text(Type) = &quot;New Business&quot;, OR(isnew(), ISCHANGED(Type))) ,
+AND(text(Account.Type)  &lt;&gt; &quot;Customer&quot;,
+text(Type) = &quot;Existing Business&quot;,
+NOT( ISPICKVAL(StageName, &quot;Closed Won&quot;)),
+NOT(ISPICKVAL( Order_Type__c ,&quot;Migration&quot;)),
+NOT(ISPICKVAL( Order_Type__c ,&quot;Early Renewal&quot;)),
+NOT(ISPICKVAL( Order_Type__c ,&quot;Contract Renewal&quot;)),
+OR(isnew(), ISCHANGED(Type))
+)
+)
+)</errorConditionFormula>
+    <errorMessage>Please make sure the opportunity Type is correct. Type must be Existing Business for active Customers, and New Business for Prospects and Former Customers</errorMessage>
+</ValidationRule>

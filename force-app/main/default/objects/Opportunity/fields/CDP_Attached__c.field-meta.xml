@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CDP_Attached__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Checkbox that is automatically checked when a CDP is attached in box (for now it is manual but should be made automatic whenever possible)</description>
+    <inlineHelpText>Required before moving to Stage 3</inlineHelpText>
+    <label>CDP Attached</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

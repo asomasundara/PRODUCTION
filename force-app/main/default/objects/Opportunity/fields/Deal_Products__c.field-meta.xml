@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Deal_Products__c</fullName>
+    <description>Please Indicate the Products you&apos;re planning on selling on this deal</description>
+    <inlineHelpText>Please Indicate the Products you&apos;re planning on selling on this deal</inlineHelpText>
+    <label>Deal Products</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Incent</fullName>
+                <default>false</default>
+                <label>Incent</label>
+            </value>
+            <value>
+                <fullName>Xactly Forecasting</fullName>
+                <default>false</default>
+                <label>Xactly Forecasting</label>
+            </value>
+            <value>
+                <fullName>AlignStar</fullName>
+                <default>false</default>
+                <label>AlignStar</label>
+            </value>
+            <value>
+                <fullName>Advanced Quota Planning</fullName>
+                <default>false</default>
+                <label>Advanced Quota Planning</label>
+            </value>
+            <value>
+                <fullName>Benchmarking</fullName>
+                <default>false</default>
+                <label>Benchmarking</label>
+            </value>
+            <value>
+                <fullName>CEA</fullName>
+                <default>false</default>
+                <label>CEA</label>
+            </value>
+            <value>
+                <fullName>CEF</fullName>
+                <default>false</default>
+                <label>CEF</label>
+            </value>
+            <value>
+                <fullName>Express</fullName>
+                <default>false</default>
+                <label>Express</label>
+            </value>
+            <value>
+                <fullName>Insights</fullName>
+                <default>false</default>
+                <label>Insights</label>
+            </value>
+            <value>
+                <fullName>Sales Planning</fullName>
+                <default>false</default>
+                <label>Sales Planning</label>
+            </value>
+            <value>
+                <fullName>SimplyComp</fullName>
+                <default>false</default>
+                <label>SimplyComp</label>
+            </value>
+            <value>
+                <fullName>Show Me</fullName>
+                <default>false</default>
+                <label>Show Me</label>
+            </value>
+            <value>
+                <fullName>Strategic Services</fullName>
+                <default>false</default>
+                <label>Strategic Services</label>
+            </value>
+            <value>
+                <fullName>Objectives</fullName>
+                <default>false</default>
+                <label>Objectives</label>
+            </value>
+            <value>
+                <fullName>Obero</fullName>
+                <default>false</default>
+                <label>Obero</label>
+            </value>
+            <value>
+                <fullName>Technical Account Manager</fullName>
+                <default>false</default>
+                <label>Technical Account Manager</label>
+            </value>
+            <value>
+                <fullName>Training</fullName>
+                <default>false</default>
+                <label>Training</label>
+            </value>
+            <value>
+                <fullName>Coaching</fullName>
+                <default>false</default>
+                <label>Coaching</label>
+            </value>
+            <value>
+                <fullName>Enabling Offers</fullName>
+                <default>false</default>
+                <label>Enabling Offers</label>
+            </value>
+            <value>
+                <fullName>Sales Analytics</fullName>
+                <default>false</default>
+                <label>Sales Analytics</label>
+            </value>
+            <value>
+                <fullName>Delta</fullName>
+                <default>false</default>
+                <label>Delta</label>
+            </value>
+            <value>
+                <fullName>Inspire</fullName>
+                <default>false</default>
+                <label>Inspire</label>
+            </value>
+            <value>
+                <fullName>Views</fullName>
+                <default>false</default>
+                <label>Views</label>
+            </value>
+            <value>
+                <fullName>Professional Services</fullName>
+                <default>false</default>
+                <label>Professional Services</label>
+            </value>
+            <value>
+                <fullName>OSM</fullName>
+                <default>false</default>
+                <label>OSM</label>
+            </value>
+            <value>
+                <fullName>Xactly Framework</fullName>
+                <default>false</default>
+                <label>Xactly Framework</label>
+            </value>
+            <value>
+                <fullName>CRM Accelerator</fullName>
+                <default>false</default>
+                <label>CRM Accelerator</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

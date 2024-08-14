@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>60.0</apiVersion>
+    <customErrors>
+        <description>Exception handle while updating the Marketo S</description>
+        <name>Update_Failed</name>
+        <label>Update Failed</label>
+        <locationX>699</locationX>
+        <locationY>520</locationY>
+        <customErrorMessages>
+            <errorMessage>Error while updating the Marketo Flag to True.</errorMessage>
+            <isFieldError>false</isFieldError>
+        </customErrorMessages>
+    </customErrors>
+    <decisions>
+        <name>Check_Email_contains_Invalid_Bounced</name>
+        <label>Email contains Invalid/Bounced</label>
+        <locationX>680</locationX>
+        <locationY>371</locationY>
+        <defaultConnector>
+            <targetReference>Set_Marketo_Sync_true</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Email_contains_Invalid_Bounced</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Email</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>.invalid</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Email</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>bounced</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Records_2</targetReference>
+            </connector>
+            <label>Email contains Invalid/Bounced</label>
+        </rules>
+    </decisions>
+    <description>[01-Aug] -  Updated Condition while updating the marketo flag to true
+If a lead record is created or edited and has an email populated that&apos;s not XactlyCorp.com and not invalid, set the &apos;Marketo Sync&apos; field to true.</description>
+    <environments>Default</environments>
+    <interviewLabel>Leads with Email Sync with Marketo {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Leads with Email Sync with Marketo</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Set_Marketo_Sync_true</name>
+        <label>Set Marketo Sync = true</label>
+        <locationX>944</locationX>
+        <locationY>479</locationY>
+        <faultConnector>
+            <targetReference>Update_Failed</targetReference>
+        </faultConnector>
+        <inputAssignments>
+            <field>Marketo_Sync__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Records_2</name>
+        <label>Set Marketo Sync = false</label>
+        <locationX>416</locationX>
+        <locationY>479</locationY>
+        <faultConnector>
+            <targetReference>Update_Failed</targetReference>
+        </faultConnector>
+        <inputAssignments>
+            <field>Marketo_Sync__c</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>554</locationX>
+        <locationY>48</locationY>
+        <connector>
+            <targetReference>Check_Email_contains_Invalid_Bounced</targetReference>
+        </connector>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Email</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Email_Domain__c</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue>xactlycorp.com</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>DSCORGPKG__Email_Invalid__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <object>Lead</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

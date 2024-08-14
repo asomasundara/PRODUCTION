@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bookings_Other_Rollup__c</fullName>
+    <label>Bookings Other Rollup</label>
+    <summarizedField>OpportunityLineItem.Product_Bookings_Amount__c</summarizedField>
+    <summaryFilterItems>
+        <field>OpportunityLineItem.Product_Line_Natural__c</field>
+        <operation>notEqual</operation>
+        <value>Incent</value>
+    </summaryFilterItems>
+    <summaryFilterItems>
+        <field>OpportunityLineItem.Product_Line_Natural__c</field>
+        <operation>notEqual</operation>
+        <value>Xactly Forecasting</value>
+    </summaryFilterItems>
+    <summaryForeignKey>OpportunityLineItem.OpportunityId</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

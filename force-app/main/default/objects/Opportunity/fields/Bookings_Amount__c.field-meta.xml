@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bookings_Amount__c</fullName>
+    <description>Used as the forecasting amount pre-close, and the booking amount based on the quote at Close won 
+
+Legacy Opps = ARR (Bookings)
+Contract Renewal = Net New ARR 
+Subscription Renewal = Price Increase 
+Everything else = ARR</description>
+    <inlineHelpText>Please populate with the forecasted Bookings Amount. This field will update when the Quote is edited and when the opp is closed, but can be updated throughout</inlineHelpText>
+    <label>Bookings Amount (Total)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Currency</type>
+</CustomField>

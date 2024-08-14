@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Incentive_Opportunity_Type__c</fullName>
+    <description>Used to accommodate for when a deal is comped as one Order Type even if it&apos;s actually another Order Type (e.g. an AddOn of a new product that we&apos;d want to comp as if it were New Business)</description>
+    <externalId>false</externalId>
+    <label>Incentive Opportunity Type</label>
+    <length>40</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

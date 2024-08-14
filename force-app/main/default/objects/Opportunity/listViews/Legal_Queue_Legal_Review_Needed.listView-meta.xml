@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Legal_Queue_Legal_Review_Needed</fullName>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CORE.USERS.FULL_NAME</columns>
+    <columns>OPPORTUNITY.RECORDTYPE</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>OPPORTUNITY.TYPE</columns>
+    <columns>Order_Type__c</columns>
+    <columns>Master_Agreement__c</columns>
+    <columns>Order_Sub_Type__c</columns>
+    <columns>Annual_Recurring_Revenue__c</columns>
+    <columns>Non_Recurring_Revenue__c</columns>
+    <columns>OPPORTUNITY.AMOUNT</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Legal_Review__c</field>
+        <operation>equals</operation>
+        <value>Review Needed</value>
+    </filters>
+    <filters>
+        <field>Finance_Status__c</field>
+        <operation>equals</operation>
+    </filters>
+    <label>Legal Queue: Legal Review Needed</label>
+</ListView>

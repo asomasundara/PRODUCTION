@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Partner_Opportunities</fullName>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>OPPORTUNITY.TYPE</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>OPPORTUNITY.CLOSE_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>OPPORTUNITY.STAGE_NAME</field>
+        <operation>equals</operation>
+        <value>Stage 0 - Initial Qualification,Stage 1 - Sales Accepted Opportunity,Stage 2 - Discovery,Stage 3 - Tech Validation,Stage 4 - Business Validation,Stage 5 - Negotiation &amp; Contracts,Stage 6 - Closed Pending</value>
+    </filters>
+    <label>All Partner Opportunities</label>
+</ListView>

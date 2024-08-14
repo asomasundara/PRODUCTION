@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Primary_Competitor_for_Closed_Won</fullName>
+    <active>true</active>
+    <description>Primary Competitor needed for Closed won or Stage 6</description>
+    <errorConditionFormula>AND(
+(Primary_Competitor_Count__c =0),
+or(
+ispickval(StageName, &quot;Stage 6 - Closed Pending&quot;),
+ispickval(StageName, &quot;Closed Won&quot;)),
+and(
+ischanged(StageName),
+RecordTypeId = $Label.QS_Opportunity_Products_services_Record_Type,
+TEXT( Order_Type__c )&lt;&gt;&quot;Contract Extension&quot; ,
+$Profile.Name &lt;&gt; &quot;System Administrator&quot;,
+$User.Alias &lt;&gt; &quot;IT&quot;
+)
+)</errorConditionFormula>
+    <errorMessage>Please fill out the &apos;Competitors&apos; link above with all applicable competitor accounts and mark one as &apos;Primary&apos;.</errorMessage>
+</ValidationRule>

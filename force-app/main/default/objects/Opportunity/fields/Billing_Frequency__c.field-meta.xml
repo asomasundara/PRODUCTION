@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Billing_Frequency__c</fullName>
+    <description>Populated by the QuoteTriggerHandler from the Primary Quote</description>
+    <inlineHelpText>Billing Frequency from the Primary Quote</inlineHelpText>
+    <label>Billing Frequency</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetName>SBQQ__BillingFrequency</valueSetName>
+    </valueSet>
+</CustomField>

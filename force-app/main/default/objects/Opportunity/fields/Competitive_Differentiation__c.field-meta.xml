@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Competitive_Differentiation__c</fullName>
+    <description>Field used for VVS (Vista Value Selling) Closing Plan</description>
+    <inlineHelpText>Have I surfaced all likely alternatives and have I demonstrated effectively how we’re stronger/better?</inlineHelpText>
+    <label>Value Map: Competitive Differentiation</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1 - I&apos;ve just started capturing this information</fullName>
+                <default>false</default>
+                <label>1 - I&apos;ve just started capturing this information</label>
+            </value>
+            <value>
+                <fullName>2 - I know most competitors/alternatives</fullName>
+                <default>false</default>
+                <label>2 - I know most competitors/alternatives</label>
+            </value>
+            <value>
+                <fullName>3 - I know all competitors/ alternatives and the key buyers have confirmed that we&apos;re stronger</fullName>
+                <default>false</default>
+                <label>3 - I know all competitors/ alternatives and the key buyers have confirmed that we&apos;re stronger</label>
+            </value>
+            <value>
+                <fullName>0 - Inadequate differentiation</fullName>
+                <default>false</default>
+                <label>0 - Inadequate differentiation</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

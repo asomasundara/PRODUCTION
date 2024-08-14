@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bill_To__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Bill To address set on the Primary Quote pushed to the Opportunity using the QuoteTriggerHandler. This field should not be editable at the Opportunity, only on the Primary Quote.</description>
+    <inlineHelpText>For reference only. Can only be edited from the Primary Quote.</inlineHelpText>
+    <label>Bill To</label>
+    <lookupFilter>
+        <active>false</active>
+        <filterItems>
+            <field>Bill_To_Ship_To__c.Bill_To__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </filterItems>
+        <filterItems>
+            <field>Bill_To_Ship_To__c.Account__c</field>
+            <operation>equals</operation>
+            <valueField>$Source.AccountId</valueField>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Bill_To_Ship_To__c</referenceTo>
+    <relationshipLabel>Opportunities (Bill To)</relationshipLabel>
+    <relationshipName>OpportunitiesBT</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

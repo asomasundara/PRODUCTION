@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>In_Forecast__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>Deals checked &quot;In Forecast&quot; are considered in the deal line of sales directors/VPs. Field is not visible to AEs or SDRs</inlineHelpText>
+    <label>TO BE DELETED In Forecast</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Order_Sub_Type_required_for_AddOn_Opps</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( ISPICKVAL(Type,&apos;Existing Business&apos;), OR(ISPICKVAL(Order_Type__c, &apos;AddOn&apos;),ISPICKVAL(Order_Type__c, &apos;Contract Renewal&apos;)), ISPICKVAL(Order_Sub_Type__c,&apos;&apos;),  ISPICKVAL(StageName, &apos;Stage 6 - Closed Pending&apos;) )</errorConditionFormula>
+    <errorDisplayField>Order_Sub_Type__c</errorDisplayField>
+    <errorMessage>Order Sub Type is required for AddOn and Contract Renewal Opportunities.</errorMessage>
+</ValidationRule>

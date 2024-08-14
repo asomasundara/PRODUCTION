@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Only_One_Primary_Partner</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ISCHANGED( Number_of_Primary_Partners__c ) ,
+ Number_of_Primary_Partners__c   &gt; 1)</errorConditionFormula>
+    <errorMessage>There is already a primary partner on this opportunity. Please either change the other partner to not be primary, or add this partner without the primary box checked</errorMessage>
+</ValidationRule>

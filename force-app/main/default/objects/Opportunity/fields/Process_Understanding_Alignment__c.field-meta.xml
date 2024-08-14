@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Process_Understanding_Alignment__c</fullName>
+    <description>Field used for VVS (Vista Value Selling) Closing Plan.</description>
+    <inlineHelpText>Do I understand their purchase process and are we (Catalyst/Champion) aligned on exactly what must happen and when?</inlineHelpText>
+    <label>Purchase Process: Understand/Alignment</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1 - I&apos;ve just started capturing this information</fullName>
+                <default>false</default>
+                <label>1 - I&apos;ve just started capturing this information</label>
+            </value>
+            <value>
+                <fullName>2 - I understand their process</fullName>
+                <default>false</default>
+                <label>2 - I understand their process</label>
+            </value>
+            <value>
+                <fullName>3 - The Catalyst/Influential Champion and I have a Mutual Action Plan</fullName>
+                <default>false</default>
+                <label>3 - The Catalyst/Influential Champion and I have a Mutual Action Plan</label>
+            </value>
+            <value>
+                <fullName>0 - No Mutual Action Plan</fullName>
+                <default>false</default>
+                <label>0 - No Mutual Action Plan</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

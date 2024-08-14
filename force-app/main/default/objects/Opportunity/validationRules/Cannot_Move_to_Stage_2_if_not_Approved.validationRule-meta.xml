@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cannot_Move_to_Stage_2_if_not_Approved</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ISCHANGED(StageName),
+SDR_Handoff_Ready__c = false,
+!ISNULL(ADR_User_Lookup__c),
+TEXT(StageName) = &quot;Stage 2 - Discovery&quot;,
+TEXT(StageName) = &quot;Stage 3 - Tech Validation&quot;,
+TEXT(StageName) = &quot;Stage 4 - Business Validation&quot;,
+TEXT(StageName) = &quot;Stage 5 - Negotiation and Contracts&quot;,
+TEXT(StageName) = &quot;Stage 6 - Closed Pending&quot;,
+TEXT(StageName) = &quot;Closed Lost&quot;,
+TEXT(StageName) = &quot;Closed Won&quot;
+)</errorConditionFormula>
+    <errorMessage>You can not move an opportunity to Stage 2 or beyond if there is a pending approval process. Please complete the SDR approval process in order to progress the opportunity.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Order_Type__c</fullName>
+    <description>Used by IT Integrations</description>
+    <inlineHelpText>AddOn includes to cross-sell and up-sell</inlineHelpText>
+    <label>Order Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Type</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>New</fullName>
+                <default>false</default>
+                <label>New</label>
+            </value>
+            <value>
+                <fullName>AddOn</fullName>
+                <default>false</default>
+                <label>AddOn</label>
+            </value>
+            <value>
+                <fullName>Migration</fullName>
+                <default>false</default>
+                <label>Migration</label>
+            </value>
+            <value>
+                <fullName>Services Only</fullName>
+                <default>false</default>
+                <label>Services Only</label>
+            </value>
+            <value>
+                <fullName>Change Order</fullName>
+                <default>false</default>
+                <label>Change Order</label>
+            </value>
+            <value>
+                <fullName>Subscription Renewal</fullName>
+                <default>false</default>
+                <label>Subscription Renewal</label>
+            </value>
+            <value>
+                <fullName>Decommission</fullName>
+                <default>false</default>
+                <label>Decommission</label>
+            </value>
+            <value>
+                <fullName>Contract Renewal</fullName>
+                <default>false</default>
+                <label>Contract Renewal</label>
+            </value>
+            <value>
+                <fullName>Overage</fullName>
+                <default>false</default>
+                <label>Overage</label>
+            </value>
+            <value>
+                <fullName>Debooking</fullName>
+                <default>false</default>
+                <label>Debooking</label>
+            </value>
+            <value>
+                <fullName>Early Renewal</fullName>
+                <default>false</default>
+                <label>Early Renewal</label>
+            </value>
+            <value>
+                <fullName>Contract Extension</fullName>
+                <default>false</default>
+                <label>Contract Extension</label>
+            </value>
+            <value>
+                <fullName>Ramp Add</fullName>
+                <default>false</default>
+                <label>Ramp Add</label>
+            </value>
+            <value>
+                <fullName>Booked Ramp</fullName>
+                <default>false</default>
+                <label>Booked Ramp</label>
+            </value>
+            <value>
+                <fullName>Accelerate</fullName>
+                <default>false</default>
+                <label>Accelerate</label>
+            </value>
+            <value>
+                <fullName>Prepaid Training</fullName>
+                <default>false</default>
+                <label>Prepaid Training</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>New Business</controllingFieldValue>
+            <valueName>New</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New Business</controllingFieldValue>
+            <controllingFieldValue>Existing Business</controllingFieldValue>
+            <valueName>Services Only</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>New Business</controllingFieldValue>
+            <controllingFieldValue>Existing Business</controllingFieldValue>
+            <valueName>Prepaid Training</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Existing Business</controllingFieldValue>
+            <valueName>AddOn</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Existing Business</controllingFieldValue>
+            <valueName>Migration</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Existing Business</controllingFieldValue>
+            <valueName>Change Order</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Existing Business</controllingFieldValue>
+            <valueName>Subscription Renewal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Existing Business</controllingFieldValue>
+            <valueName>Decommission</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Existing Business</controllingFieldValue>
+            <valueName>Contract Renewal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Existing Business</controllingFieldValue>
+            <valueName>Overage</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Existing Business</controllingFieldValue>
+            <valueName>Debooking</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Existing Business</controllingFieldValue>
+            <valueName>Early Renewal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Existing Business</controllingFieldValue>
+            <valueName>Contract Extension</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Existing Business</controllingFieldValue>
+            <valueName>Ramp Add</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Existing Business</controllingFieldValue>
+            <valueName>Accelerate</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

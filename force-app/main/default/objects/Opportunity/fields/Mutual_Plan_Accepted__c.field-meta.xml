@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mutual_Plan_Accepted__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>Please check box if prospect has agreed to the Mutual Plan letter/email.</inlineHelpText>
+    <label>Mutual Plan Accepted</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

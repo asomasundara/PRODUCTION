@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Approval_Process_only_in_Stage_6</fullName>
+    <active>true</active>
+    <description>Prevents Sales Ops, Legal, or Finance approval if the opp isn&apos;t in Stage 6 - Closed Pending</description>
+    <errorConditionFormula>AND(
+ NOT(ISPICKVAL( StageName , &quot;Stage 6 - Closed Pending&quot;)),
+ NOT(ISPICKVAL( StageName , &quot;Closed Won&quot;)),
+ NOT( $Profile.Name = &quot;Finance&quot;),
+ NOT(ISPICKVAL(Finance_Status__c,&quot;Rejected&quot;)), 
+ OR(ISPICKVAL( Sales_Ops_Approved__c , &quot;Approved&quot;),
+ ISPICKVAL( Legal_Review__c ,&quot;Approved&quot;))
+)</errorConditionFormula>
+    <errorMessage>Before doing the Operations or Legal review, please move the Opportunity to Stage 6 - Closed Pending</errorMessage>
+</ValidationRule>

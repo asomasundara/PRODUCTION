@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Tier__c</fullName>
+    <description>Pulls the Tier field from the Account onto all opportunities for that Accoount</description>
+    <externalId>false</externalId>
+    <formula>Text(Account.Tier__c)</formula>
+    <inlineHelpText>Pulls the Tier field from the Account onto all opportunities for that Accoount</inlineHelpText>
+    <label>Account Tier</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

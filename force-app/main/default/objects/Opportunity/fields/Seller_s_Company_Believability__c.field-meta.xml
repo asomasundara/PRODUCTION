@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Seller_s_Company_Believability__c</fullName>
+    <description>For VVSS</description>
+    <inlineHelpText>Why should the customer believe you? 
+What evidence increases the customer’s confidence? (references, track record, expertise)</inlineHelpText>
+    <label>Proven Impact to the Buyer</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Data_Prepardness__c</fullName>
+    <description>SC populated field to detail what data was received from the prospect</description>
+    <label>Data Received by SC</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Plans</fullName>
+                <default>false</default>
+                <label>Plans</label>
+            </value>
+            <value>
+                <fullName>Transaction Data</fullName>
+                <default>false</default>
+                <label>Transaction Data</label>
+            </value>
+            <value>
+                <fullName>Sample Statements</fullName>
+                <default>false</default>
+                <label>Sample Statements</label>
+            </value>
+            <value>
+                <fullName>Sample Reports</fullName>
+                <default>false</default>
+                <label>Sample Reports</label>
+            </value>
+            <value>
+                <fullName>SFDC</fullName>
+                <default>false</default>
+                <label>SFDC</label>
+            </value>
+            <value>
+                <fullName>Hi Level Req Summary</fullName>
+                <default>false</default>
+                <label>Hi Level Req Summary</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>7</visibleLines>
+</CustomField>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Services_Required_Stage_3</fullName>
+    <active>true</active>
+    <errorConditionFormula>and(
+ISBLANK(TEXT( Services_Required__c )),
+ISCHANGED(StageName),
+!ispickval(Order_Type__c, &apos;Prepaid Training&apos;),
+!ispickval(Order_Type__c, &apos;Subscription Renewal&apos;),
+!ispickval(Order_Type__c, &apos;Contract Renewal&apos;),
+!ispickval(Primary_Win_Loss_Reason__c, &apos;Cleanup/Duplicate&apos;),
+or(TEXT(StageName) = &quot;Stage 3 - Tech Validation&quot;,
+TEXT(StageName) = &quot;Stage 4 - Business Validation&quot;,
+TEXT(StageName) = &quot;Stage 5 - Negotiation and Contracts&quot;,
+TEXT(StageName) = &quot;Stage 6 - Closed Pending&quot;,
+TEXT(StageName) = &quot;Closed Won&quot;
+)
+)</errorConditionFormula>
+    <errorDisplayField>Services_Required__c</errorDisplayField>
+    <errorMessage>Please fill in the &quot;Services Required&quot; value before moving this opportunity beyond stage 2.</errorMessage>
+</ValidationRule>

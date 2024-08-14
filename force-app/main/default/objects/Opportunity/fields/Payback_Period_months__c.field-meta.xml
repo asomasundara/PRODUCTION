@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Payback_Period_months__c</fullName>
+    <description>VVSS: Used to record the estimated number of months the product will take to &quot;pay for itself&quot;. It is an output of the Hobson ROI Calculator. If you do not have the ROI Calculator created/implemented, hide this field until you do.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The time in months it will take for a customer&apos;s product to &quot;pay for itself&quot;. An output of the Hobson ROI Calculator.</inlineHelpText>
+    <label>Payback Period (months)</label>
+    <precision>3</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

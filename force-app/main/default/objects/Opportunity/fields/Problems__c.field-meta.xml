@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Problems__c</fullName>
+    <inlineHelpText>We have all their problems identified, prioritized, and layered, with examples. We know how they fit into the customer&apos;s highest priorities.</inlineHelpText>
+    <label>Problems/Challenges</label>
+    <length>50000</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>LongTextArea</type>
+    <visibleLines>5</visibleLines>
+</CustomField>

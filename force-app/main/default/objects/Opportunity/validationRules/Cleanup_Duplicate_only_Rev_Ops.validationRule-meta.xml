@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cleanup_Duplicate_only_Rev_Ops</fullName>
+    <active>true</active>
+    <description>Only Rev Ops users can select Cleanup/Duplicate from the Primary Win/Loss reasons</description>
+    <errorConditionFormula>ISCHANGED( Primary_Win_Loss_Reason__c ) &amp;&amp;  OR(ISPICKVAL(Primary_Win_Loss_Reason__c, &apos;Cleanup/Duplicate&apos;),ISPICKVAL(Primary_Win_Loss_Reason__c, &apos;Inherited bad opp&apos;)) &amp;&amp;  $UserRole.DeveloperName != &apos;Rep_Sales_Operations&apos;</errorConditionFormula>
+    <errorMessage>Only Rev Ops can select Cleanup/Duplicate or Inherited Bad Opp</errorMessage>
+</ValidationRule>

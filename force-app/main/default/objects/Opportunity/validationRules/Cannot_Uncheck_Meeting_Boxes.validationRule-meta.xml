@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cannot_Uncheck_Meeting_Boxes</fullName>
+    <active>true</active>
+    <description>Once checked off, you cannot uncheck the Meeting Accepted or Meeting Completed boxes</description>
+    <errorConditionFormula>OR( 
+AND( 
+PRIORVALUE(Meeting_Accepted__c)=TRUE, 
+Meeting_Accepted__c = FALSE, 
+NOT( $Profile.Name = &quot;System Administrator&quot;)), 
+
+AND( 
+PRIORVALUE(Meeting_Completed__c)=TRUE, 
+Meeting_Completed__c = FALSE, 
+NOT( $Profile.Name = &quot;System Administrator&quot;)) 
+)</errorConditionFormula>
+    <errorMessage>Once checked off, you cannot uncheck the Meeting Accepted or Meeting Completed boxes</errorMessage>
+</ValidationRule>

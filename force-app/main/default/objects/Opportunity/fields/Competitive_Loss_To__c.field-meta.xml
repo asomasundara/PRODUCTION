@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Competitive_Loss_To__c</fullName>
+    <label>Competitive Loss To</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Anaplan</fullName>
+                <default>false</default>
+                <label>Anaplan</label>
+            </value>
+            <value>
+                <fullName>Apttus</fullName>
+                <default>false</default>
+                <label>Apttus</label>
+            </value>
+            <value>
+                <fullName>Beqom</fullName>
+                <default>false</default>
+                <label>Beqom</label>
+            </value>
+            <value>
+                <fullName>Callidus</fullName>
+                <default>false</default>
+                <label>Callidus</label>
+            </value>
+            <value>
+                <fullName>CloudComp</fullName>
+                <default>false</default>
+                <label>CloudComp</label>
+            </value>
+            <value>
+                <fullName>Core Commissions</fullName>
+                <default>false</default>
+                <label>Core Commissions</label>
+            </value>
+            <value>
+                <fullName>Glocent</fullName>
+                <default>false</default>
+                <label>Glocent</label>
+            </value>
+            <value>
+                <fullName>Iconixx</fullName>
+                <default>false</default>
+                <label>Iconixx</label>
+            </value>
+            <value>
+                <fullName>Internal Build</fullName>
+                <default>false</default>
+                <label>Internal Build</label>
+            </value>
+            <value>
+                <fullName>Merced</fullName>
+                <default>false</default>
+                <label>Merced</label>
+            </value>
+            <value>
+                <fullName>NetCommissions</fullName>
+                <default>false</default>
+                <label>NetCommissions</label>
+            </value>
+            <value>
+                <fullName>NetSuite</fullName>
+                <default>false</default>
+                <label>NetSuite</label>
+            </value>
+            <value>
+                <fullName>Nirvaha</fullName>
+                <default>false</default>
+                <label>Nirvaha</label>
+            </value>
+            <value>
+                <fullName>Not Competitive (i.e. No decision)</fullName>
+                <default>false</default>
+                <label>Not Competitive (i.e. No decision)</label>
+            </value>
+            <value>
+                <fullName>Optymyze</fullName>
+                <default>false</default>
+                <label>Optymyze</label>
+            </value>
+            <value>
+                <fullName>Oracle Fusion</fullName>
+                <default>false</default>
+                <label>Oracle Fusion</label>
+            </value>
+            <value>
+                <fullName>Oracle OIC</fullName>
+                <default>false</default>
+                <label>Oracle OIC</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Performio</fullName>
+                <default>false</default>
+                <label>Performio</label>
+            </value>
+            <value>
+                <fullName>QCommission</fullName>
+                <default>false</default>
+                <label>QCommission</label>
+            </value>
+            <value>
+                <fullName>SAP</fullName>
+                <default>false</default>
+                <label>SAP</label>
+            </value>
+            <value>
+                <fullName>SAP ICM</fullName>
+                <default>false</default>
+                <label>SAP ICM</label>
+            </value>
+            <value>
+                <fullName>Siebel</fullName>
+                <default>false</default>
+                <label>Siebel</label>
+            </value>
+            <value>
+                <fullName>Surgesoft</fullName>
+                <default>false</default>
+                <label>Surgesoft</label>
+            </value>
+            <value>
+                <fullName>Unknown</fullName>
+                <default>false</default>
+                <label>Unknown</label>
+            </value>
+            <value>
+                <fullName>Varicent</fullName>
+                <default>false</default>
+                <label>Varicent</label>
+            </value>
+            <value>
+                <fullName>Vistex</fullName>
+                <default>false</default>
+                <label>Vistex</label>
+            </value>
+            <value>
+                <fullName>Xtiva</fullName>
+                <default>false</default>
+                <label>Xtiva</label>
+            </value>
+            <value>
+                <fullName>Success Factors</fullName>
+                <default>false</default>
+                <label>Success Factors</label>
+            </value>
+            <value>
+                <fullName>Blitz</fullName>
+                <default>false</default>
+                <label>Blitz</label>
+            </value>
+            <value>
+                <fullName>CaptivateIQ</fullName>
+                <default>false</default>
+                <label>CaptivateIQ</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

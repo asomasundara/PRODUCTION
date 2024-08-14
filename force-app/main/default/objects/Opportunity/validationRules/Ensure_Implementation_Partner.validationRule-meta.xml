@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ensure_Implementation_Partner</fullName>
+    <active>true</active>
+    <description>This validation rule ensures that if the Services Provider field on an Opportunity is set to &quot;Partner,&quot; there must be at least one associated Opportunity Partner with the role &quot;Implementation&quot; before the Opportunity can transition from Stage 2 - Discovery</description>
+    <errorConditionFormula>AND(
+ISPICKVAL(Services_Provider__c, &quot;Partner&quot;),
+ISPICKVAL(StageName, &quot;Stage 3 - Tech Validation&quot;), ISCHANGED(StageName),
+AND(Opportunity_Partner_Rollup__c = 0)
+)</errorConditionFormula>
+    <errorMessage>If the Services Provider is &apos;Partner&apos;, there must be at least one Opportunity Partner with the role &apos;Implementation&apos; before moving from Stage 2 to Stage 3.</errorMessage>
+</ValidationRule>

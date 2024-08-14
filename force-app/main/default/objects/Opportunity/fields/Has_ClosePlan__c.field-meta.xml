@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Has_ClosePlan__c</fullName>
+    <formula>TSPC__CPDealCount__c &gt; 0</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Shows a checkbox if there is a count of &gt; 0 i.e. there is a closeplan against the opp</inlineHelpText>
+    <label>Has ClosePlan</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

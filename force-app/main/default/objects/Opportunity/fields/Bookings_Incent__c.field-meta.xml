@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bookings_Incent__c</fullName>
+    <defaultValue>0</defaultValue>
+    <inlineHelpText>The planned bookings amount for Incent. Can be manually entered but will be overridden once a primary quote is added onto the opportunity.</inlineHelpText>
+    <label>Bookings Amount (Incent)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

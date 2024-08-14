@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sub_Loss_Reason_for_Price</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ISCHANGED(Primary_Win_Loss_Reason__c),
+ISPICKVAL(Primary_Win_Loss_Reason__c, &apos;Price&apos;),
+ISBLANK(TEXT(Sub_Loss_Reason__c))
+)</errorConditionFormula>
+    <errorMessage>Please select a Sub Loss Reason as the Primary Loss Reason is &quot;Price&quot;</errorMessage>
+</ValidationRule>

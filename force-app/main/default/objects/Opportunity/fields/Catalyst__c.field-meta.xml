@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Catalyst__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Records whoever is currently set as the Catalyst on the 3-2-1 Buyers Map</description>
+    <inlineHelpText>Records whoever is currently set as the Catalyst on the 3-2-1 Buyers Map</inlineHelpText>
+    <label>Catalyst</label>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>Opportunities (Catalyst)</relationshipLabel>
+    <relationshipName>Opportunities</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>QS_Legal_Rejection_Comments_Needed</fullName>
+    <active>true</active>
+    <description>Legal Notes required when rejecting</description>
+    <errorConditionFormula>ISPICKVAL( Legal_Review__c , &apos;Not Approved&apos;) &amp;&amp;  Legal_Notes__c == &apos;&apos;</errorConditionFormula>
+    <errorDisplayField>Legal_Notes__c</errorDisplayField>
+    <errorMessage>Legal Notes required when rejecting</errorMessage>
+</ValidationRule>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Urgency__c</fullName>
+    <description>Field used for VVS (Vista Value Selling) Closing Plan</description>
+    <inlineHelpText>Are the buyers’ deadlines/milestones powerful enough to drive purchase in the near term?</inlineHelpText>
+    <label>Value Map: Urgency</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1 - I&apos;ve just started capturing this information</fullName>
+                <default>false</default>
+                <label>1 - I&apos;ve just started capturing this information</label>
+            </value>
+            <value>
+                <fullName>2 - The deadline is far off but there is a milestone we are working towards</fullName>
+                <default>false</default>
+                <label>2 - The deadline is far off but there is a milestone we are working towards</label>
+            </value>
+            <value>
+                <fullName>3 - We have a clear deadline that will drive ample urgency</fullName>
+                <default>false</default>
+                <label>3 - We have a clear deadline that will drive ample urgency</label>
+            </value>
+            <value>
+                <fullName>0 - No clear/formal deadline</fullName>
+                <default>false</default>
+                <label>0 - No clear/formal deadline</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

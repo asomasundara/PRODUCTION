@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Renewal_Price_Increase__c</fullName>
+    <description>Indicates the % increase in price (ARR) upon renewal. Calculated as the ARR for the first year of the renewal contract divided by the previous ARR.</description>
+    <inlineHelpText>Calculated as the ARR for the first year of the renewal contract divided by the previous ARR.</inlineHelpText>
+    <label>Renewal Price Increase (%)</label>
+    <precision>5</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Percent</type>
+</CustomField>

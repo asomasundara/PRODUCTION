@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Primary_Win_Loss_Reason__c</fullName>
+    <label>Primary Win/Loss Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>StageName</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Company Acquired</fullName>
+                <default>false</default>
+                <label>Company Acquired</label>
+            </value>
+            <value>
+                <fullName>Competitor</fullName>
+                <default>false</default>
+                <label>Competitor</label>
+            </value>
+            <value>
+                <fullName>Deferred</fullName>
+                <default>false</default>
+                <label>Deferred</label>
+            </value>
+            <value>
+                <fullName>Duplicate</fullName>
+                <default>false</default>
+                <label>Duplicate</label>
+            </value>
+            <value>
+                <fullName>Features</fullName>
+                <default>false</default>
+                <label>Features</label>
+            </value>
+            <value>
+                <fullName>Infinite Chase</fullName>
+                <default>false</default>
+                <label>Infinite Chase</label>
+            </value>
+            <value>
+                <fullName>Lost Budget</fullName>
+                <default>false</default>
+                <label>Lost Budget</label>
+            </value>
+            <value>
+                <fullName>Lost Project Sponsor</fullName>
+                <default>false</default>
+                <label>Lost Project Sponsor</label>
+            </value>
+            <value>
+                <fullName>No Authority/Access to Authority</fullName>
+                <default>false</default>
+                <label>No Authority/Access to Authority</label>
+            </value>
+            <value>
+                <fullName>No Pain Identified</fullName>
+                <default>false</default>
+                <label>No Pain Identified</label>
+            </value>
+            <value>
+                <fullName>No Show</fullName>
+                <default>false</default>
+                <label>No Show</label>
+            </value>
+            <value>
+                <fullName>Not Enough Subscribers</fullName>
+                <default>false</default>
+                <label>Not Enough Subscribers</label>
+            </value>
+            <value>
+                <fullName>Other (See Details)</fullName>
+                <default>false</default>
+                <label>Other (See Details)</label>
+            </value>
+            <value>
+                <fullName>Perceived Value</fullName>
+                <default>false</default>
+                <label>Perceived Value</label>
+            </value>
+            <value>
+                <fullName>Price</fullName>
+                <default>false</default>
+                <label>Price</label>
+            </value>
+            <value>
+                <fullName>Project Cancelled</fullName>
+                <default>false</default>
+                <label>Project Cancelled</label>
+            </value>
+            <value>
+                <fullName>References</fullName>
+                <default>false</default>
+                <label>References</label>
+            </value>
+            <value>
+                <fullName>Reputation</fullName>
+                <default>false</default>
+                <label>Reputation</label>
+            </value>
+            <value>
+                <fullName>ROI</fullName>
+                <default>false</default>
+                <label>ROI</label>
+            </value>
+            <value>
+                <fullName>Status Quo</fullName>
+                <default>false</default>
+                <label>Status Quo</label>
+            </value>
+            <value>
+                <fullName>Timing</fullName>
+                <default>false</default>
+                <label>Timing</label>
+            </value>
+            <value>
+                <fullName>Wrong Account</fullName>
+                <default>false</default>
+                <label>Wrong Account</label>
+            </value>
+            <value>
+                <fullName>Wrong AE Assignment</fullName>
+                <default>false</default>
+                <label>Wrong AE Assignment</label>
+            </value>
+            <value>
+                <fullName>Wrong Role</fullName>
+                <default>false</default>
+                <label>Wrong Role</label>
+            </value>
+            <value>
+                <fullName>Unresponsive</fullName>
+                <default>false</default>
+                <label>Unresponsive</label>
+            </value>
+            <value>
+                <fullName>No Need</fullName>
+                <default>false</default>
+                <label>No Need</label>
+            </value>
+            <value>
+                <fullName>No Budget</fullName>
+                <default>false</default>
+                <label>No Budget</label>
+            </value>
+            <value>
+                <fullName>Project Cancelled/Doing Nothing</fullName>
+                <default>false</default>
+                <label>Project Cancelled/Doing Nothing</label>
+            </value>
+            <value>
+                <fullName>Timing (Not Ready To Buy Within 12 Months)</fullName>
+                <default>false</default>
+                <label>Timing (Not Ready To Buy Within 12 Months)</label>
+            </value>
+            <value>
+                <fullName>No Fit (Company Size)</fullName>
+                <default>false</default>
+                <label>No Fit (Company Size)</label>
+            </value>
+            <value>
+                <fullName>Price (Software)</fullName>
+                <default>false</default>
+                <label>Price (Software)</label>
+            </value>
+            <value>
+                <fullName>Price (Services)</fullName>
+                <default>false</default>
+                <label>Price (Services)</label>
+            </value>
+            <value>
+                <fullName>Product Gap</fullName>
+                <default>false</default>
+                <label>Product Gap</label>
+            </value>
+            <value>
+                <fullName>Selected Competitor</fullName>
+                <default>false</default>
+                <label>Selected Competitor</label>
+            </value>
+            <value>
+                <fullName>Invalid</fullName>
+                <default>false</default>
+                <label>Invalid</label>
+            </value>
+            <value>
+                <fullName>Cleanup/Duplicate</fullName>
+                <default>false</default>
+                <label>Cleanup/Duplicate</label>
+            </value>
+            <value>
+                <fullName>Inherited bad opp</fullName>
+                <default>false</default>
+                <label>Inherited bad opp</label>
+            </value>
+            <value>
+                <fullName>Former Xactly Customer</fullName>
+                <default>false</default>
+                <label>Former Xactly Customer</label>
+            </value>
+            <value>
+                <fullName>Xactly Partnership</fullName>
+                <default>false</default>
+                <label>Xactly Partnership</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <controllingFieldValue>Qualified Out</controllingFieldValue>
+            <valueName>Unresponsive</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <controllingFieldValue>Qualified Out</controllingFieldValue>
+            <valueName>No Budget</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <controllingFieldValue>Qualified Out</controllingFieldValue>
+            <valueName>Project Cancelled/Doing Nothing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <controllingFieldValue>Qualified Out</controllingFieldValue>
+            <valueName>Timing (Not Ready To Buy Within 12 Months)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <controllingFieldValue>Qualified Out</controllingFieldValue>
+            <valueName>Price (Software)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <controllingFieldValue>Qualified Out</controllingFieldValue>
+            <valueName>Price (Services)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <controllingFieldValue>Qualified Out</controllingFieldValue>
+            <valueName>Product Gap</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <controllingFieldValue>Qualified Out</controllingFieldValue>
+            <valueName>Selected Competitor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Invalid</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <controllingFieldValue>Qualified Out</controllingFieldValue>
+            <controllingFieldValue>Duplicate</controllingFieldValue>
+            <valueName>Inherited bad opp</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Qualified Out</controllingFieldValue>
+            <valueName>No Need</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Qualified Out</controllingFieldValue>
+            <valueName>No Fit (Company Size)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Stage 6 - Closed Pending</controllingFieldValue>
+            <valueName>Company Acquired</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Stage 6 - Closed Pending</controllingFieldValue>
+            <valueName>Competitor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Stage 6 - Closed Pending</controllingFieldValue>
+            <valueName>Features</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Stage 6 - Closed Pending</controllingFieldValue>
+            <valueName>Price</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Stage 6 - Closed Pending</controllingFieldValue>
+            <valueName>Former Xactly Customer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Stage 6 - Closed Pending</controllingFieldValue>
+            <valueName>Xactly Partnership</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

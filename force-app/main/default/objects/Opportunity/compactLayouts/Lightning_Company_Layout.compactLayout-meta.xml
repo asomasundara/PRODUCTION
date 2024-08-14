@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lightning_Company_Layout</fullName>
+    <fields>Name</fields>
+    <fields>AccountId</fields>
+    <fields>CloseDate</fields>
+    <fields>StageName</fields>
+    <fields>Probability</fields>
+    <fields>Bookings_Amount__c</fields>
+    <fields>Sales_Forecast_Category__c</fields>
+    <fields>Type</fields>
+    <fields>Order_Type__c</fields>
+    <fields>Total_Services__c</fields>
+    <label>Lightning Company Layout</label>
+</CompactLayout>

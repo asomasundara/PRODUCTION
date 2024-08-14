@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>vh__Nice_to_Have_Opportunity_Gap_Score__c</fullName>
+    <deprecated>false</deprecated>
+    <label>Nice to Have Opportunity Gap Score</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>None</fullName>
+                <default>true</default>
+                <label>None</label>
+            </value>
+            <value>
+                <fullName>OneToFour</fullName>
+                <default>false</default>
+                <label>OneToFour</label>
+            </value>
+            <value>
+                <fullName>FivePlus</fullName>
+                <default>false</default>
+                <label>FivePlus</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

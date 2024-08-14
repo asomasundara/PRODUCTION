@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sub_Renewal_if_Open_Opps</fullName>
+    <active>true</active>
+    <description>Blocks sub renewals from being moved to stage 6 if there&apos;s an open add on or new biz opp tied to the account</description>
+    <errorConditionFormula>AND( 
+ISPICKVAL(Order_Type__c, 
+&quot;Subscription Renewal&quot;),
+ISPICKVAL( StageName, &quot;Stage 6 - Closed Pending&quot;), 
+ISCHANGED(StageName), 
+Account.Has_Active_Opportunities__c = TRUE,
+$Profile.Name &lt;&gt; &quot;System Administrator&quot;,
+$User.Alias &lt;&gt; &apos;bshires&apos;,
+$User.Alias &lt;&gt; &apos;jajones&apos;
+)</errorConditionFormula>
+    <errorMessage>There is an active AddOn Opportunity for this Opp, please check in with the Account owner before processing this Sub Renewal. If you believe you&apos;re getting this error by mistake, please reach out to Jacob Jones or Sales Ops</errorMessage>
+</ValidationRule>

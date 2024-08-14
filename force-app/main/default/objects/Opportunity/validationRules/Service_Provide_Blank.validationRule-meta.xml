@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Service_Provide_Blank</fullName>
+    <active>true</active>
+    <errorConditionFormula>and(
+ ISPICKVAL(Services_Required__c, &apos;Yes&apos;),
+ ISBLANK(TEXT( Services_Provider__c)
+)
+)</errorConditionFormula>
+    <errorDisplayField>Services_Required__c</errorDisplayField>
+    <errorMessage>The &quot;Services Required&quot; pick list is marked as &quot;Yes&quot; - please fill in the &quot;Services Provider&quot; pick list to advance this opportunity.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EligibleCurrency</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( ISPICKVAL(Account.Xactly_Legal_Entity__c, &quot;Xactly K.K.&quot;),
+     NOT(OR(ISPICKVAL(CurrencyIsoCode,&quot;JPY&quot;),
+            ISPICKVAL(CurrencyIsoCode,&quot;USD&quot;)
+            )
+         )
+    )</errorConditionFormula>
+    <errorDisplayField>CurrencyIsoCode</errorDisplayField>
+    <errorMessage>This Opportunity&apos;s Account is Xactly Legal Entity = Xactly K.K. Please select JPY (Japanese Yen) or USD (U.S. Dollar)</errorMessage>
+</ValidationRule>

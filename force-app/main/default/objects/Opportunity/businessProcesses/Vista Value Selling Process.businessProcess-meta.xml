@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BusinessProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Vista Value Selling Process</fullName>
+    <isActive>true</isActive>
+    <values>
+        <fullName>Closed Lost</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Duplicate</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Qualified Out</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Stage 0 - Initial Qualification</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Stage 1 - Sales Accepted Opportunity</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Stage 2 - Discovery</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Stage 3 - Tech Validation</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Stage 4 - Business Validation</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Stage 5 - Negotiation %26 Contracts</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Stage 6 - Closed Pending</fullName>
+        <default>false</default>
+    </values>
+</BusinessProcess>

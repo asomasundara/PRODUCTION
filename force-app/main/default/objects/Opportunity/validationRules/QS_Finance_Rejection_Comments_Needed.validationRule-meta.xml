@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>QS_Finance_Rejection_Comments_Needed</fullName>
+    <active>true</active>
+    <description>Please fill out the Finance Comments</description>
+    <errorConditionFormula>Finance_Approval_Comments__c	== &apos;&apos; &amp;&amp;  ISPICKVAL(Finance_Status__c, &apos;Rejected&apos;)</errorConditionFormula>
+    <errorDisplayField>Finance_Approval_Comments__c</errorDisplayField>
+    <errorMessage>Please fill out the Finance Comments</errorMessage>
+</ValidationRule>

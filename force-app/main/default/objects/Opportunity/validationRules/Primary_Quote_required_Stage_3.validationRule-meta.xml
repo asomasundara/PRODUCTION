@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Primary_Quote_required_Stage_3</fullName>
+    <active>true</active>
+    <description>Primary Quote with Products needed for Stage 4</description>
+    <errorConditionFormula>AND(OR(ischanged(StageName),AND(ISNEW(), ISPICKVAL( Order_Type__c , &quot;New&quot;))) , 
+NOT( $Profile.Name = &quot;System Administrator&quot;) ,
+NOT( $Profile.Name = &quot;IT&quot;) ,
+TEXT( Order_Sub_Type__c  )&lt;&gt; &quot;Cancellation&quot;,
+ NOT(HasOpportunityLineItem),
+OR(
+text(StageName)=&quot;Stage 4 - Business Validation&quot;,  
+text(StageName)=&quot;Stage 5 - Negotiation &amp; Contracts&quot;,  
+text(StageName)=&quot;Stage 6 - Closed Pending&quot;  
+)
+)</errorConditionFormula>
+    <errorMessage>A primary quote with products is needed in order to proceed to Stage 4 or higher</errorMessage>
+</ValidationRule>

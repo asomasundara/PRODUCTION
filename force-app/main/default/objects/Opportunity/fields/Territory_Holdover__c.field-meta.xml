@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Territory_Holdover__c</fullName>
+    <inlineHelpText>Indicates the territory cycle in which this Opportunity was &quot;heldover&quot; from the previous territory assignment and not reassigned to the new AE</inlineHelpText>
+    <label>Territory Holdover</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Q1FY25</fullName>
+                <default>false</default>
+                <label>Q1FY25</label>
+            </value>
+            <value>
+                <fullName>Q2FY25</fullName>
+                <default>false</default>
+                <label>Q2FY25</label>
+            </value>
+            <value>
+                <fullName>Q3FY25</fullName>
+                <default>false</default>
+                <label>Q3FY25</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stage_1_Disqualified_Or_Forward</fullName>
+    <active>true</active>
+    <description>At stage 1, opps can only be closed by flagging as Qualified Out (formerly Disqualified)</description>
+    <errorConditionFormula>AND( 
+ISPICKVAL(PRIORVALUE(StageName),&quot;Stage 1 - Sales Accepted Opportunity&quot;), 
+OR(ISPICKVAL(StageName, &quot;Closed Lost&quot;), 
+ISPICKVAL(StageName, &quot;Invalid&quot;)),
+ISPICKVAL(Type, &quot;New Business&quot;))</errorConditionFormula>
+    <errorMessage>At stage 1, opps can only be closed by flagging as Qualified Out</errorMessage>
+</ValidationRule>

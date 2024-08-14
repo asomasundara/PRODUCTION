@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Influencer_Engagement__c</fullName>
+    <description>Field used for VVS (Vista Value Selling) Closing Plan</description>
+    <inlineHelpText>Have I successfully identified and engaged all individuals with greatest influence over the Decision Makers?</inlineHelpText>
+    <label>Power Map: Influencer Engagement</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1 - I&apos;ve just started capturing this information</fullName>
+                <default>false</default>
+                <label>1 - I&apos;ve just started capturing this information</label>
+            </value>
+            <value>
+                <fullName>2 - I know who all of the key Influencers are</fullName>
+                <default>false</default>
+                <label>2 - I know who all of the key Influencers are</label>
+            </value>
+            <value>
+                <fullName>3 - I know who all the key Influencers are and the majority are supporters</fullName>
+                <default>false</default>
+                <label>3 - I know who all the key Influencers are and the majority are supporters</label>
+            </value>
+            <value>
+                <fullName>0 - Inadequate Influencer Support</fullName>
+                <default>false</default>
+                <label>0 - Inadequate Influencer Support</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

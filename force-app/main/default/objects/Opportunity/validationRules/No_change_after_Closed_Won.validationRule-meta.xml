@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_change_after_Closed_Won</fullName>
+    <active>true</active>
+    <description>Opportunities can&apos;t be changed after Closed Won</description>
+    <errorConditionFormula>OR(
+   AND(TEXT(PRIORVALUE( StageName ))&lt;&gt; &quot;Stage 6 - Closed Pending&quot; 
+       ,text(StageName) = &quot;Closed Won&quot;
+       ,ISCHANGED(StageName)
+       ,NOT( $Profile.Name = &quot;IT&quot;)
+       ,NOT( $Profile.Name = &quot;System Administrator&quot;)
+       ,NOT( $Profile.Name = &quot;Finance&quot;)
+       )
+   ,AND(TEXT(PRIORVALUE( StageName )) = &quot;Closed Won&quot;
+       ,ISCHANGED(StageName) 
+       ,NOT( $Profile.Name = &quot;System Administrator&quot;)
+       )
+   ,AND(text(StageName) = &quot;Closed Won&quot;
+        ,NOT( $Profile.Name = &quot;System Administrator&quot;)
+        ,NOT( $Profile.Name = &quot;Finance&quot;)
+        ,NOT( $Profile.Name = &quot;IT&quot;)
+        ,$User.Alias &lt;&gt; &quot;rdemarco&quot;
+        ,!$Permission.Customer_Success_Admin 
+        ,!$Permission.Sales_Operations
+        ,NOT(ISCHANGED(Solutions_Consultants__c)) 
+        )
+    )</errorConditionFormula>
+    <errorMessage>Opportunities can&apos;t be changed after Closed Won</errorMessage>
+</ValidationRule>

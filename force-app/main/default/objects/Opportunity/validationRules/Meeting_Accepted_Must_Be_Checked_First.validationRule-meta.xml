@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Meeting_Accepted_Must_Be_Checked_First</fullName>
+    <active>false</active>
+    <description>Before modifying the opp, please confirm that you&apos;ve accepted the meeting, checking off the &quot;Meeting Accepted&quot; box</description>
+    <errorConditionFormula>AND(
+OR(  CONTAINS(CreatedBy.UserRole.Name, &quot;BDR&quot;), CONTAINS(CreatedBy.UserRole.Name, &quot;SDR&quot;)),
+NOT(CONTAINS($UserRole.Name , &quot;BDR&quot;)),
+NOT(CONTAINS($UserRole.Name , &quot;SDR&quot;)),
+NOT(CONTAINS($UserRole.Name , &quot;Partner&quot;)),
+ $Profile.Name = &quot;Sales User&quot;,
+ISPICKVAL(Order_Type__c, &quot;New&quot;),
+ NOT(CONTAINS( $UserRole.Name , &quot;Solutions&quot;)),
+ ISPICKVAL( StageName , &quot;Stage 0 - Marketing Qualified Lead&quot;),
+ Meeting_Accepted__c = FALSE)</errorConditionFormula>
+    <errorMessage>Before modifying the opp, please confirm that you&apos;ve accepted the meeting, checking off the &quot;Meeting Accepted&quot; box</errorMessage>
+</ValidationRule>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Legacy_Incent_Enterprise_Customer__c</fullName>
+    <description>Used for Accounting purposes to evaluate if the customer originally bought the legacy &quot;Incent Enterprise&quot; that had different functionality and would be evaluated separately from new Incent Enterprise customers</description>
+    <formula>IF( Account.Legacy_Incent_Enterprise_Customer__c &gt; 0,TRUE,FALSE)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Legacy Incent Enterprise Customer</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

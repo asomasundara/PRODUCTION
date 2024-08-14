@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Partner_Influence__c</fullName>
+    <label>Partner Influence</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>408 West</fullName>
+                <default>false</default>
+                <label>408 West</label>
+            </value>
+            <value>
+                <fullName>ADP</fullName>
+                <default>false</default>
+                <label>ADP</label>
+            </value>
+            <value>
+                <fullName>Arcadia</fullName>
+                <default>false</default>
+                <label>Arcadia</label>
+            </value>
+            <value>
+                <fullName>Astadia</fullName>
+                <default>false</default>
+                <label>Astadia</label>
+            </value>
+            <value>
+                <fullName>BigMachines</fullName>
+                <default>false</default>
+                <label>BigMachines</label>
+            </value>
+            <value>
+                <fullName>Bluewolf</fullName>
+                <default>false</default>
+                <label>Bluewolf</label>
+            </value>
+            <value>
+                <fullName>Conformity</fullName>
+                <default>false</default>
+                <label>Conformity</label>
+            </value>
+            <value>
+                <fullName>EchoLane</fullName>
+                <default>false</default>
+                <label>EchoLane</label>
+            </value>
+            <value>
+                <fullName>eVerge</fullName>
+                <default>false</default>
+                <label>eVerge</label>
+            </value>
+            <value>
+                <fullName>Intelenex</fullName>
+                <default>false</default>
+                <label>Intelenex</label>
+            </value>
+            <value>
+                <fullName>Mansa Systems</fullName>
+                <default>false</default>
+                <label>Mansa Systems</label>
+            </value>
+            <value>
+                <fullName>Microsoft</fullName>
+                <default>false</default>
+                <label>Microsoft</label>
+            </value>
+            <value>
+                <fullName>Model Metrics</fullName>
+                <default>false</default>
+                <label>Model Metrics</label>
+            </value>
+            <value>
+                <fullName>Netsuite</fullName>
+                <default>false</default>
+                <label>Netsuite</label>
+            </value>
+            <value>
+                <fullName>Open Symmetry</fullName>
+                <default>false</default>
+                <label>Open Symmetry</label>
+            </value>
+            <value>
+                <fullName>Oracle</fullName>
+                <default>false</default>
+                <label>Oracle</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Salesforce.com</fullName>
+                <default>false</default>
+                <label>Salesforce.com</label>
+            </value>
+            <value>
+                <fullName>Solutions Partners</fullName>
+                <default>false</default>
+                <label>Solutions Partners</label>
+            </value>
+            <value>
+                <fullName>SuccessFactors</fullName>
+                <default>false</default>
+                <label>SuccessFactors</label>
+            </value>
+            <value>
+                <fullName>Workday</fullName>
+                <default>false</default>
+                <label>Workday</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>10</visibleLines>
+</CustomField>

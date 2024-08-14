@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Deal_Strategy__c</fullName>
+    <description>For VVSS</description>
+    <inlineHelpText>Formulate a sales strategy that makes Your Differentiator the primary buying criteria of the Catalyst</inlineHelpText>
+    <label>Deal Strategy</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>LongTextArea</type>
+    <visibleLines>25</visibleLines>
+</CustomField>

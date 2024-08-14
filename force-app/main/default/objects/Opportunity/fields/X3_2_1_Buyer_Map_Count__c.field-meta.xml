@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X3_2_1_Buyer_Map_Count__c</fullName>
+    <description>count of 3-2-1 buyer map records on the opportunity</description>
+    <inlineHelpText>count of 3-2-1 buyer map records on the opportunity</inlineHelpText>
+    <label>3-2-1 Buyer Map Count</label>
+    <summaryForeignKey>Key_Players_Influencers__c.Opportunity__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

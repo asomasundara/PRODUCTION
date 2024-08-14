@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lock_Fields_on_Closed_Pending</fullName>
+    <active>true</active>
+    <description>Bookings Amount and CloseDate can&apos;t be changed after closed pending</description>
+    <errorConditionFormula>AND(   
+    NOT( ISCHANGED(StageName)) 
+    , text(StageName) = &quot;Stage 6 - Closed Pending&quot; 
+    , NOT( $Permission.Edit_Stage_6_Opportunities )
+    , NOT( $Profile.Name = &quot;IT&quot;)
+    , NOT( $Profile.Name = &quot;System Administrator&quot;)
+    , NOT( $Profile.Name = &quot;Finance&quot;)
+    , NOT($Profile.Name = &quot;Legal&quot;)
+    , NOT( $User.LastName  = &quot;Cardamon&quot;)
+    , ISPICKVAL(Sales_Ops_Approved__c, &quot;Approved&quot;) 
+    , NOT(TEXT(PRIORVALUE( Finance_Status__c)) = &quot;Rejected&quot;)
+    , OR(
+         ISCHANGED( Bookings_Amount__c )
+         , ISCHANGED(  CloseDate  )
+         )
+    )</errorConditionFormula>
+    <errorMessage>Bookings Amount and CloseDate can&apos;t be changed after closed pending</errorMessage>
+</ValidationRule>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>QS_QL_Reason_Other_Comments_Needed</fullName>
+    <active>true</active>
+    <errorConditionFormula>INCLUDES(Win_Loss_Reason__c, &apos;Other (see Details)&apos;) &amp;&amp; ISBLANK( Win_Loss_Comments__c ) &amp;&amp;   RecordTypeId = &apos;0121U000000G42i&apos;</errorConditionFormula>
+    <errorDisplayField>Win_Loss_Comments__c</errorDisplayField>
+    <errorMessage>Please provide comments when selecting a Close Reason of Other</errorMessage>
+</ValidationRule>

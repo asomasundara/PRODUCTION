@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>61.0</apiVersion>
+    <decisions>
+        <name>Campaign_Member_Status_Already_Responded</name>
+        <label>Campaign Member Status Already Responded?</label>
+        <locationX>176</locationX>
+        <locationY>431</locationY>
+        <defaultConnector>
+            <targetReference>Update_Campaign_Member_Status_to_Responded</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Already_Responded</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>CampaignMemberRecord.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Responded</stringValue>
+                </rightValue>
+            </conditions>
+            <label>Already Responded</label>
+        </rules>
+    </decisions>
+    <description>When a email task comes from the Gainsight email titled &apos;Would you refer us to your revenue leadership team?&apos;, update the campaign member record with Status = Responded.</description>
+    <environments>Default</environments>
+    <interviewLabel>Email Task Responded Campaign: {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Email Task Responded Campaign: FY25-ES-FX Next Best Product</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Get_Campaign_Members</name>
+        <label>Get Campaign Members</label>
+        <locationX>176</locationX>
+        <locationY>323</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Campaign_Member_Status_Already_Responded</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>CampaignId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>701Ri00000IefrhIAB</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>ContactId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.WhoId</elementReference>
+            </value>
+        </filters>
+        <object>CampaignMember</object>
+        <outputReference>CampaignMemberRecord</outputReference>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>Status</queriedFields>
+        <queriedFields>Legacy_Member_First_Responded_Date__c</queriedFields>
+    </recordLookups>
+    <recordUpdates>
+        <name>Update_Campaign_Member_Status_to_Responded</name>
+        <label>Update Campaign Member Status to Responded</label>
+        <locationX>264</locationX>
+        <locationY>539</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>CampaignMemberRecord.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Legacy_Member_First_Responded_Date__c</field>
+            <value>
+                <elementReference>$Record.CreatedDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <stringValue>Responded</stringValue>
+            </value>
+        </inputAssignments>
+        <object>CampaignMember</object>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Campaign_Members</targetReference>
+        </connector>
+        <filterFormula>AND(BEGINS({!$Record.WhoId},&apos;003&apos;),CONTAINS({!$Record.Subject},&quot;Would you refer us to your revenue leadership team?&quot;),NOT(CONTAINS({!$Record.Subject}, &apos;Automatic reply&apos;)))</filterFormula>
+        <object>Task</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>CampaignMemberRecord</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <objectType>CampaignMember</objectType>
+    </variables>
+</Flow>

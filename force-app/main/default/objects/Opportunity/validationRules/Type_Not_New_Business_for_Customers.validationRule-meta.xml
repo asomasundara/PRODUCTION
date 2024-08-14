@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type_Not_New_Business_for_Customers</fullName>
+    <active>false</active>
+    <description>For customers with active subscriptions, you cannot set the opportunity to New Business</description>
+    <errorConditionFormula>AND(
+ $Profile.Name &lt;&gt; &quot;System Administrator&quot;,
+ $Profile.Name &lt;&gt; &quot;IT-Integrations-Admin&quot;,
+ $Profile.Name &lt;&gt; &quot;SysAdmin-Secondary&quot;,
+ Account.Customer_Maximum_Sub_End__c &gt; TODAY(),
+ ISPICKVAL(Type, &quot;New Business&quot;)
+)</errorConditionFormula>
+    <errorMessage>For customers with active subscriptions, you cannot set the opportunity to New Business. Please change the Type to Add-On, Renewal, or whatever fits best for this oppty.</errorMessage>
+</ValidationRule>

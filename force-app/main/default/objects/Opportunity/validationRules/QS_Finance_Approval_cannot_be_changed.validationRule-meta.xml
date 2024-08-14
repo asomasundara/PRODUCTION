@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>QS_Finance_Approval_cannot_be_changed</fullName>
+    <active>true</active>
+    <description>When the Finance Review Status has previously been set to &apos;Approved&apos;, it cannot be changed</description>
+    <errorConditionFormula>AND(NOT(ISPICKVAL( Finance_Status__c , &apos;Approved&apos;)), 
+ISPICKVAL(PRIORVALUE(Finance_Status__c), &apos;Approved&apos;),
+$Profile.Name &lt;&gt; &apos;System Administrator&apos;,
+$Profile.Name &lt;&gt; &apos;IT&apos;
+)</errorConditionFormula>
+    <errorMessage>When the Finance Review Status has previously been set to &apos;Approved&apos;, it cannot be changed</errorMessage>
+</ValidationRule>

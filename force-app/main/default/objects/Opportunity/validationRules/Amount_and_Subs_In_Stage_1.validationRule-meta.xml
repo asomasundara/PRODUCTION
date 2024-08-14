@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Amount_and_Subs_In_Stage_1</fullName>
+    <active>true</active>
+    <description>Sales Users Must Enter a Subscriber count and Amount before moving to Stage 1.</description>
+    <errorConditionFormula>AND( $Profile.Name = &quot;Sales User&quot;,
+ NOT( ISPICKVAL(Order_Type__c ,&quot;Services Only&quot;)),
+ NOT( ISPICKVAL(Order_Type__c ,&quot;Change Order&quot;)),
+ NOT(ISPICKVAL( StageName , &quot;Stage 0 - Initial Qualification&quot;)),
+ NOT( ISPICKVAL( StageName , &quot;Closed Won&quot;)),
+ ISPICKVAL(Type, &quot;New Business&quot;),
+OR(  ISBLANK( Subscribers__c ),
+ISBLANK( Bookings_Amount__c )
+)
+)</errorConditionFormula>
+    <errorMessage>Please fill in a Subscriber count and Bookings Amount before moving to Stage 1.</errorMessage>
+</ValidationRule>

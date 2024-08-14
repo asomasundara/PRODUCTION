@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>recurly_v2__Recurly_Coupon__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Recurly Coupon for Automation Subscription Creation</description>
+    <externalId>false</externalId>
+    <label>Recurly Coupon</label>
+    <length>40</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

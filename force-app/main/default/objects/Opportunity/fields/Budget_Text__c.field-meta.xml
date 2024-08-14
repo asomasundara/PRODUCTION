@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Budget_Text__c</fullName>
+    <inlineHelpText>We understand how budgets are established. If no budget exists, we understand how this will be funded. We know the ROI metrics that they will use to justify the purchase and have examples for each. Each metric is identified, layered, and quantified. The internal justification process is mapped out.</inlineHelpText>
+    <label>Budgeting/Funding Process</label>
+    <length>2000</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

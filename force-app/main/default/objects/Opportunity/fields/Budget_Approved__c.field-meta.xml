@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Budget_Approved__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>check this box if budget for the project has been approved</description>
+    <label>Budget Available Based on +/-35%</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>QS_Lock_Close_Pending_from_Sales</fullName>
+    <active>true</active>
+    <description>Prevents sales-related profiles from editing Close-Pending Opportunities.</description>
+    <errorConditionFormula>AND(TEXT(PRIORVALUE(StageName)) = &quot;Stage 6 - Close-Pending&quot;, 
+    TEXT(StageName)&lt;&gt;&apos;Stage 5 - Negotiate&apos;,
+    NOT($User.ProfileId = &apos;00e1U00000110GI&apos;), 
+    NOT($User.ProfileId = &apos;00e1U000000Rycw&apos;), 
+    NOT($User.ProfileId = &apos;00e1U000000Rycr&apos;)
+
+
+)</errorConditionFormula>
+    <errorMessage>You do not have permissions to edit Close-Pending Opportunities. Please request Sales Ops assistance if you need to edit this Opportunity.</errorMessage>
+</ValidationRule>

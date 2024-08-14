@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bookings_Amount_Test__c</fullName>
+    <description>Testing Bookings Amount</description>
+    <formula>if(  text(Order_Type__c)=&quot;Contract Renewal&quot;,  ARR_Growth__c ,
+if(  text(Order_Type__c)=&quot;Subscription Renewal&quot;,   Total_Price_Increase__c  ,
+if(  NOT(ISBLANK(ARR_Bookings__c )) &amp;&amp;  SBQQ__PrimaryQuote__c=null &amp;&amp; ARR_Bookings__c &gt; 0, ARR_Bookings__c,
+if(  SBQQ__PrimaryQuote__c=null,Amount,
+Annual_Recurring_Revenue__c
+))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Bookings Amount Test</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

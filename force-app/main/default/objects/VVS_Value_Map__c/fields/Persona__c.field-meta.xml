@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Persona__c</fullName>
+    <description>Used for Vista Value Selling</description>
+    <label>Persona</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Chief Financial Officer</fullName>
+                <default>false</default>
+                <label>Chief Financial Officer</label>
+            </value>
+            <value>
+                <fullName>Chief Revenue / Sales Officer</fullName>
+                <default>false</default>
+                <label>Chief Revenue / Sales Officer</label>
+            </value>
+            <value>
+                <fullName>Chief Technology / Information Officer</fullName>
+                <default>false</default>
+                <label>Chief Technology / Information Officer</label>
+            </value>
+            <value>
+                <fullName>Compensation Leader</fullName>
+                <default>false</default>
+                <label>Compensation Leader</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Revenue Operations Leader</fullName>
+                <default>false</default>
+                <label>Revenue Operations Leader</label>
+            </value>
+            <value>
+                <fullName>Sales Leader</fullName>
+                <default>false</default>
+                <label>Sales Leader</label>
+            </value>
+            <value>
+                <fullName>Sales Operations Leader</fullName>
+                <default>false</default>
+                <label>Sales Operations Leader</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

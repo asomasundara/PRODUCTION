@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X321_Buyer_Map_required_Stage_2</fullName>
+    <active>false</active>
+    <description>3-2-1 buyer map needed for Stage 2</description>
+    <errorConditionFormula>AND(ischanged(StageName), text(StageName)=&quot;Stage 2 - Discovery&quot;,  X3_2_1_Buyer_Map_Count__c =0,
+ ISPICKVAL(Type, &quot;New Business&quot;),
+NOT( $Profile.Name = &quot;System Administrator&quot;)
+)</errorConditionFormula>
+    <errorMessage>3-2-1 Buyer Map needed in order to proceed to Stage 2 - SQL</errorMessage>
+</ValidationRule>

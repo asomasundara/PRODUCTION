@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Quantitative_Deal_Strength_Score__c</fullName>
+    <description>Field used for VVS (Vista Value Selling) for Closing Plan</description>
+    <formula>((value(LEFT( text( Catalyst_Key_Influencer_Engagement__c ) , 1))*1)
++
+(value(LEFT( text(Competitive_Differentiation__c ) , 1))*1) +
+(value(LEFT( text( Cost_of_Inaction__c ) , 1))*1.5) +
+(value(LEFT( text( Decision_Maker_Engagement__c ) , 1))*1.5) +
+(value(LEFT( text( Demo_Quality__c ) , 1))* 1) +
+(value(LEFT( text( Funding__c ) , 1))*1) +
+(value(LEFT( text( Influencer_Engagement__c ) , 1))*1) +
+(value(LEFT( text( Key_Threats__c ) , 1))*1) +
+(value(LEFT( text( Objectives_Success_Measures__c ) , 1))*1.5) +
+(value(LEFT( text( Our_Proof__c ) , 1))*1) +
+(value(LEFT( text( Process_Understanding_Alignment__c ) , 1))*1.5) +
+(value(LEFT( text( Purchase_Requirements__c ) , 1))*1.5) +
+(value(LEFT( text( ROI_VVS__c ) , 1))*1.5) +
+(value(LEFT( text( Urgency__c ) , 1))*1))
+
+/(17*3)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Quantitative Deal Strength Score (%)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <type>Percent</type>
+</CustomField>

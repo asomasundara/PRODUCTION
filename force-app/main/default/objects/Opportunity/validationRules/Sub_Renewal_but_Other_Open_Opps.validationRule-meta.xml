@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sub_Renewal_but_Other_Open_Opps</fullName>
+    <active>false</active>
+    <description>Before closing this subscription renewal, please confirm that there are no active adds for this account. Please work with the CAM to figure this out.</description>
+    <errorConditionFormula>AND( ISPICKVAL( Order_Type__c , &quot;Subscription Renewal&quot;),
+ Account.Has_Active_Opportunities__c = TRUE,
+ ISPICKVAL(StageName ,&quot;Stage 6 - Closed Pending&quot;))</errorConditionFormula>
+    <errorMessage>Before closing this subscription renewal, please confirm that there are no active adds for this account. Please work with the CAM to figure this out.</errorMessage>
+</ValidationRule>

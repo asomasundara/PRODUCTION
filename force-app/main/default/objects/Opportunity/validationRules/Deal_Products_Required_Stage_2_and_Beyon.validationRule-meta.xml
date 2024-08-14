@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Deal_Products_Required_Stage_2_and_Beyon</fullName>
+    <active>false</active>
+    <errorConditionFormula>AND(
+ISCHANGED(StageName),
+ISBLANK(Deal_Products__c),
+!ISPICKVAL(Order_Type__c , &apos;Subscription Renewal&apos;),
+OR(
+TEXT(StageName) = &quot;Stage 1 - Sales Accepted Opportunity&quot;,
+TEXT(StageName) = &quot;Stage 2 - Discovery&quot;,
+TEXT(StageName) = &quot;Stage 3 - Tech Validation&quot;,
+TEXT(StageName) = &quot;Stage 4 - Business Validation&quot;,
+TEXT(StageName) = &quot;Stage 5 - Negotiation and Contracts&quot;,
+TEXT(StageName) = &quot;Stage 6 - Closed Pending&quot;,
+TEXT(StageName) = &quot;Closed Lost&quot;,
+TEXT(StageName) = &quot;Closed Won&quot;
+)
+)</errorConditionFormula>
+    <errorDisplayField>X3_2_1_Buyer_Map__c</errorDisplayField>
+    <errorMessage>Please fill in the products you are expecting to be sold on this deal under the &quot;Deal Products&quot; field in order to advance this opportunity past stage 0</errorMessage>
+</ValidationRule>

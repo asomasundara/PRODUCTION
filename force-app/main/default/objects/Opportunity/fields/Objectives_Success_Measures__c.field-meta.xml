@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Objectives_Success_Measures__c</fullName>
+    <description>Field used for VVS (Vista Value Selling) Closing Plan.</description>
+    <inlineHelpText>Do I adequately understand the key buyers&apos; objectives, including their success measures?</inlineHelpText>
+    <label>Value Map: Objectives &amp; Success Measures</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1 - I&apos;ve just started capturing this information</fullName>
+                <default>false</default>
+                <label>1 - I&apos;ve just started capturing this information</label>
+            </value>
+            <value>
+                <fullName>2 - I&apos;m missing some objectives and/or success measures</fullName>
+                <default>false</default>
+                <label>2 - I&apos;m missing some objectives and/or success measures</label>
+            </value>
+            <value>
+                <fullName>3 - I have all key details and the alignment to our solution is strong</fullName>
+                <default>false</default>
+                <label>3 - I have all key details and the alignment to our solution is strong</label>
+            </value>
+            <value>
+                <fullName>0 - Objectives &amp; Success Measures do not align with our solution</fullName>
+                <default>false</default>
+                <label>0 - Objectives &amp; Success Measures do not align with our solution</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

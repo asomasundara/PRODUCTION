@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X3_2_1_Buyer_Map__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>Navigate the Customer’s Informal Political Landscape. Acknowledgement of Marketable Insight, from 3 different individuals within Influence Base, in at least 2 different departments, with 1 Catalyst identified to create budget.</inlineHelpText>
+    <label>3-2-1 Buyer Map Completed?</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

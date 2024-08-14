@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Handover_Date_Cannot_Be_Blank_or_Future</fullName>
+    <active>true</active>
+    <errorConditionFormula>and(
+ischanged(StageName),
+ISPICKVAL(StageName, &apos;Stage 2 - Discovery&apos;),
+SDR_Handoff_Ready__c=true,
+or(
+Handover_Call_Completed_Date__c&gt;TODAY(),
+isnull(Handover_Call_Completed_Date__c))
+)</errorConditionFormula>
+    <errorDisplayField>Handover_Call_Completed_Date__c</errorDisplayField>
+    <errorMessage>The Handover Call Completed Date Cannot Be Blank or In The Future</errorMessage>
+</ValidationRule>

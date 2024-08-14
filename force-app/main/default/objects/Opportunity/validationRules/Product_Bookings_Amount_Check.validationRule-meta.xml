@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Bookings_Amount_Check</fullName>
+    <active>true</active>
+    <description>Alert to make sure Sales Ops is checking the product bookings</description>
+    <errorConditionFormula>AND(ABS(Total_Product_Bookings_Amount__c -  Bookings_Amount__c ) &gt; 10,
+ ISPICKVAL(Sales_Ops_Approved__c, &quot;Approved&quot;),
+ ISPICKVAL( StageName,&quot;Stage 6 - Closed Pending&quot;))</errorConditionFormula>
+    <errorMessage>Please make sure the Bookings Amount and Product Bookings Amount match before pushing through to Operations Approved.</errorMessage>
+</ValidationRule>

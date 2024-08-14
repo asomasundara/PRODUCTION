@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Region__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(ISBLANK( Bill_To__r.Account__r.BillingCountry ),&quot;Other (e.g LATAM)&quot;,IF(CONTAINS(&quot;AE:AM:AO:AX:AZ:BF:BH:BI:BJ:BW:CF:CG:CI:CM:DJ:DK:DZ:EE:EG:EH:ER:ET:FI:FO:GA:GB:GE:GG:GH:GI:GL:GM:GN:GQ:GW:IE:IL:IM:IQ:IR:IS:JE:JO:KE:KM:KW:LB:LR:LS:LT:LV:LY:MA:MG:ML:MR:MU:MW:MZ:A:E:NG:NL:NO:OM:PS:QA:RW:SA:SC:SD:SE:SH:SJ:SL:SN:SO:SS:ST:SY:TD:TG:TN:TR:TZ:UG:YE:YT:ZA:ZM:ZW:CZ&quot;,Bill_To__r.Account__r.BillingCountry),&quot;EMEA North&quot;,IF(CONTAINS(&quot;AD:AL:AT:BA:BE:BG:BY:CH:CY:DE:ES:FR:GR:HR:HU:IT:LI:LU:MC:MD:ME:MK:MT:PL:PT:RO:RS:RU:SI:SK:SM:UA&quot;,Bill_To__r.Account__r.BillingCountry),&quot;EMEA Central&quot;,IF(CONTAINS(&quot;AF:AQ:AU:BD:BN:BT:BV:CC:CK:CN:CX:FJ:HM:ID:IN:IO:JP:KG:KH:KI:KR:KZ:LK:MM:MN:MO:MV:MY:NC:NF:NP:NR:NU:NZ:PF:PG:PH:PK:PN:SB:SG:TF:TH:TJ:TK:TL:TM:TO:TV:UZ:VU:WF:WS:VN:KP:HK&quot;,Bill_To__r.Account__r.BillingCountry),&quot;APAC&quot;,IF(ISBLANK(Bill_To__r.Account__r.BillingState),&quot;Other (e.g LATAM)&quot;,IF(CONTAINS(&quot;USA-WA:USA-OR:USA-CA:USA-NV:USA-ID:USA-MT:USA-WY:USA-NM:USA-AZ:USA-UT:USA-HI:USA-AK&quot;,Bill_To__r.Account__r.BillingState),&quot;NA WEST&quot;,IF(CONTAINS(&quot;USA-MI:USA-ND:USA-SD:USA-NE:USA-KS:USA-OK:USA-TX:USA-MN:USA-IA:USA-MO:USA-AR:USA-LA:USA-WI:USA-IL:USA-MS:USA-AL:USA-CO&quot;,Bill_To__r.Account__r.BillingState),&quot;NA Central&quot;,IF(CONTAINS(&quot;USA-IN:USA-KY:USA-TN:USA-WV:USA-VA:USA-NC:USA-SC:USA-GA:USA-FL:USA-DC:USA-MD:USA-DE:USA-NJ:USA-PA:USA-CT:USA-NY:USA-RI:USA-MA:USA-NH:USA-VT:USA-ME:USA-OH:CAN-ON:CAN-BC:CAN-QC:CAN-AB:CAN-MB:CAN-SK:CAN-NS:CAN-NB:CAN-YT:CAN-NS:CAN-NL:CAN-PE:CAN-NT:CAN-NU&quot;,Bill_To__r.Account__r.BillingState),&quot;NA East&quot;,&quot;Other (e.g LATAM)&quot;))))))))</formula>
+    <label>Region</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

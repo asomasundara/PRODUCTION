@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Manager_Team_Credit_Test__c</fullName>
+    <label>Manager Team Credit Test</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Brian Ellis</fullName>
+                <default>false</default>
+                <label>Brian Ellis</label>
+            </value>
+            <value>
+                <fullName>Dell Thompson</fullName>
+                <default>false</default>
+                <label>Dell Thompson</label>
+            </value>
+            <value>
+                <fullName>Evan Horibe</fullName>
+                <default>false</default>
+                <label>Evan Horibe</label>
+            </value>
+            <value>
+                <fullName>John Knudsen</fullName>
+                <default>false</default>
+                <label>John Knudsen</label>
+            </value>
+            <value>
+                <fullName>Michael DelVecchio</fullName>
+                <default>false</default>
+                <label>Michael DelVecchio</label>
+            </value>
+            <value>
+                <fullName>Mike Waldron</fullName>
+                <default>false</default>
+                <label>Mike Waldron</label>
+            </value>
+            <value>
+                <fullName>NA</fullName>
+                <default>false</default>
+                <label>NA</label>
+            </value>
+            <value>
+                <fullName>Nora Khalili</fullName>
+                <default>false</default>
+                <label>Nora Khalili</label>
+            </value>
+            <value>
+                <fullName>Patrick Morton</fullName>
+                <default>false</default>
+                <label>Patrick Morton</label>
+            </value>
+            <value>
+                <fullName>Sean Murray</fullName>
+                <default>false</default>
+                <label>Sean Murray</label>
+            </value>
+            <value>
+                <fullName>Shane Fredrick</fullName>
+                <default>false</default>
+                <label>Shane Frederick</label>
+            </value>
+            <value>
+                <fullName>Sheila Gregory</fullName>
+                <default>false</default>
+                <label>Sheila Gregory</label>
+            </value>
+            <value>
+                <fullName>Steve DeMarco</fullName>
+                <default>false</default>
+                <label>Steve DeMarco</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

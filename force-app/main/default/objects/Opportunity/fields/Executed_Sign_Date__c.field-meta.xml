@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Executed_Sign_Date__c</fullName>
+    <description>Contract Signed Date</description>
+    <inlineHelpText>Contract Signed Date</inlineHelpText>
+    <label>Executed Sign Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Date</type>
+</CustomField>

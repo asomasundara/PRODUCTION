@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PMInterviewRequired__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>QS: SFAC-0054</description>
+    <inlineHelpText>When checked, workflow fires to sales rep on the opportunity to begin Win/Loss review process.</inlineHelpText>
+    <label>PM Interview Required</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

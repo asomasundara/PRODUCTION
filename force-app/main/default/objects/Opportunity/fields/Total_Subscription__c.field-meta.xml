@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Subscription__c</fullName>
+    <description>Annual Contract Value for Subscription products where Product Class = Legacy
+Total Contract Value for Subscription products where Product Class = MDQ</description>
+    <inlineHelpText>Annual Contract Value for Subscription products where Product Class = Legacy
+Total Contract Value for Subscription products where Product Class = MDQ</inlineHelpText>
+    <label>Total Subscription</label>
+    <summarizedField>OpportunityLineItem.Annual_Recurring_Revenue__c</summarizedField>
+    <summaryFilterItems>
+        <field>OpportunityLineItem.Product_Type__c</field>
+        <operation>equals</operation>
+        <value>Subscription</value>
+    </summaryFilterItems>
+    <summaryForeignKey>OpportunityLineItem.OpportunityId</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

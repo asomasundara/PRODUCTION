@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>QS_Require_Decommission_Reason</fullName>
+    <active>false</active>
+    <description>Requires a decommission reason if opportunity is being decommissioned</description>
+    <errorConditionFormula>AND(TEXT(Order_Type__c) = &apos;Decommission&apos;, 
+ISBLANK(TEXT(Decommission_Reason__c)))</errorConditionFormula>
+    <errorMessage>Please select a decommission reason.</errorMessage>
+</ValidationRule>

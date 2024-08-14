@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Chief Financial Officer</fullName>
+        <default>false</default>
+        <label>Chief Financial Officer</label>
+    </customValue>
+    <customValue>
+        <fullName>Chief Revenue / Sales Officer</fullName>
+        <default>false</default>
+        <label>Chief Revenue / Sales Officer</label>
+    </customValue>
+    <customValue>
+        <fullName>Chief Technology / Information Officer</fullName>
+        <default>false</default>
+        <label>Chief Technology / Information Officer</label>
+    </customValue>
+    <customValue>
+        <fullName>Compensation Leader</fullName>
+        <default>false</default>
+        <label>Compensation Leader</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <customValue>
+        <fullName>Revenue Operations Leader</fullName>
+        <default>false</default>
+        <label>Revenue Operations Leader</label>
+    </customValue>
+    <customValue>
+        <fullName>Sales Leader</fullName>
+        <default>false</default>
+        <label>Sales Leader</label>
+    </customValue>
+    <customValue>
+        <fullName>Sales Operations Leader</fullName>
+        <default>false</default>
+        <label>Sales Operations Leader</label>
+    </customValue>
+    <masterLabel>Persona</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>
